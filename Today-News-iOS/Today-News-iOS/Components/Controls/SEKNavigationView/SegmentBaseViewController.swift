@@ -59,6 +59,7 @@ extension SegmentBaseViewController: UIScrollViewDelegate {
         vc.view.x = scrollView.contentOffset.x
         vc.view.y = 0
         vc.view.height = scrollView.height
+        vc.view.width = UIScreen.main.bounds.width
         scrollView.addSubview(vc.view)
     }
     

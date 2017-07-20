@@ -40,7 +40,7 @@ class HomeViewController: SegmentBaseViewController {
                     model.title
                 })
                 self.topNavView.titles = titles
-                self.setupChildVces(titles)
+                self.setupChildVces(self.categories)
                 // 底部的scrollView
                 self.setupContentView()
             }
@@ -81,9 +81,11 @@ class HomeViewController: SegmentBaseViewController {
     }
     
     /// 初始化子控制器
-    fileprivate func setupChildVces(_ titles:[String]) {
-        for _ in 0..<titles.count {
+    fileprivate func setupChildVces(_ models:[HomeCategory]) {
+
+        for model in models {
             let topic = TopicPageViewController()
+            topic.type = model.type
             addChildViewController(topic)
         }
         

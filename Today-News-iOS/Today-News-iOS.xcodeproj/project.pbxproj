@@ -11,10 +11,13 @@
 		04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */; };
 		04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E11F2087B9005192B7 /* SEKView+Frame.swift */; };
 		04DE58E51F20880B005192B7 /* SegmentBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E41F20880B005192B7 /* SegmentBaseViewController.swift */; };
-		04DE58E81F2095D5005192B7 /* TopPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E61F2095D5005192B7 /* TopPageViewController.swift */; };
+		04DE58E81F2095D5005192B7 /* TopicPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E61F2095D5005192B7 /* TopicPageViewController.swift */; };
 		04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE58E71F2095D5005192B7 /* TopicPageViewController.xib */; };
 		04DE58EB1F20A2D4005192B7 /* HomeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58EA1F20A2D4005192B7 /* HomeNavBarView.swift */; };
 		04DE58ED1F20A34B005192B7 /* HomeSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58EC1F20A34B005192B7 /* HomeSearchBar.swift */; };
+		04DE5AB61F20D9A0005192B7 /* HomeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE5AB51F20D9A0005192B7 /* HomeContent.swift */; };
+		04DE5AB81F20DDC2005192B7 /* HomeTopicViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE5AB71F20DDC2005192B7 /* HomeTopicViewCell.swift */; };
+		04DE5ABA1F20E0E7005192B7 /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */; };
 		04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9A7CA1F1F6F4500B8ED40 /* Assets.xcassets */; };
 		04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9A7D61F1F729000B8ED40 /* AppDelegate.swift */; };
 		04F9A7D91F1F729000B8ED40 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F9A7D71F1F729000B8ED40 /* Info.plist */; };
@@ -37,10 +40,13 @@
 		04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEKNavigationView.swift; sourceTree = "<group>"; };
 		04DE58E11F2087B9005192B7 /* SEKView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SEKView+Frame.swift"; sourceTree = "<group>"; };
 		04DE58E41F20880B005192B7 /* SegmentBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentBaseViewController.swift; sourceTree = "<group>"; };
-		04DE58E61F2095D5005192B7 /* TopPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPageViewController.swift; sourceTree = "<group>"; };
+		04DE58E61F2095D5005192B7 /* TopicPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicPageViewController.swift; sourceTree = "<group>"; };
 		04DE58E71F2095D5005192B7 /* TopicPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicPageViewController.xib; sourceTree = "<group>"; };
 		04DE58EA1F20A2D4005192B7 /* HomeNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavBarView.swift; sourceTree = "<group>"; };
 		04DE58EC1F20A34B005192B7 /* HomeSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchBar.swift; sourceTree = "<group>"; };
+		04DE5AB51F20D9A0005192B7 /* HomeContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContent.swift; sourceTree = "<group>"; };
+		04DE5AB71F20DDC2005192B7 /* HomeTopicViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicViewCell.swift; sourceTree = "<group>"; };
+		04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
 		04F9A7CA1F1F6F4500B8ED40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F9A7D61F1F729000B8ED40 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F9A7D71F1F729000B8ED40 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 		04F9A7DB1F1F829700B8ED40 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -212,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				04F9A8051F1F8F5500B8ED40 /* HomeViewController.swift */,
-				04DE58E61F2095D5005192B7 /* TopPageViewController.swift */,
+				04DE58E61F2095D5005192B7 /* TopicPageViewController.swift */,
 				04DE58E71F2095D5005192B7 /* TopicPageViewController.xib */,
 			);
 			path = Controller;
@@ -222,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				04DE58DA1F205F3A005192B7 /* HomeCategory.swift */,
+				04DE5AB51F20D9A0005192B7 /* HomeContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +239,7 @@
 			children = (
 				04DE58EA1F20A2D4005192B7 /* HomeNavBarView.swift */,
 				04DE58EC1F20A34B005192B7 /* HomeSearchBar.swift */,
+				04DE5AB71F20DDC2005192B7 /* HomeTopicViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -512,12 +521,15 @@
 				04F9A8081F1F8F6700B8ED40 /* MicroNewViewController.swift in Sources */,
 				04F9A8061F1F8F5500B8ED40 /* HomeViewController.swift in Sources */,
 				04DE58ED1F20A34B005192B7 /* HomeSearchBar.swift in Sources */,
+				04DE5ABA1F20E0E7005192B7 /* ViewConfigurable.swift in Sources */,
+				04DE5AB61F20D9A0005192B7 /* HomeContent.swift in Sources */,
 				04F9A8141F1FA3E300B8ED40 /* DataManager.swift in Sources */,
 				04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */,
 				04DE58DB1F205F3A005192B7 /* HomeCategory.swift in Sources */,
+				04DE5AB81F20DDC2005192B7 /* HomeTopicViewCell.swift in Sources */,
 				04F9A80A1F1F8F9900B8ED40 /* MineViewController.swift in Sources */,
 				04DE58EB1F20A2D4005192B7 /* HomeNavBarView.swift in Sources */,
-				04DE58E81F2095D5005192B7 /* TopPageViewController.swift in Sources */,
+				04DE58E81F2095D5005192B7 /* TopicPageViewController.swift in Sources */,
 				04F9A8161F1FA45C00B8ED40 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

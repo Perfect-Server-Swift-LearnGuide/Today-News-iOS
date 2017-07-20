@@ -12,7 +12,6 @@ class HomeCategory: NSObject {
 
     /// 分类标题
     var title = ""
-    
     /// 分类类型
     var type = 0
     

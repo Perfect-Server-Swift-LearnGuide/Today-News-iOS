@@ -19,6 +19,9 @@ class DataManager {
         case .HomeCategoryList:
             DataService.homeCategoryList(App.Uri.HomeCategoryList.rawValue, params: [:], loadFinished: loadFinished)
             
+        case let .HomeCategoryContent(params):
+            DataService.homeCategoryContent(App.Uri.HomeCategoryContent.rawValue, params: params, loadFinished: loadFinished)
+            
         default:
             break
         }

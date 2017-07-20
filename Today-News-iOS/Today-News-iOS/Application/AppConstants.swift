@@ -36,6 +36,8 @@ enum App {
     enum DataSource {
         /// 首页分类标题
         case HomeCategoryList
+        /// 首页内容
+        case HomeCategoryContent(params: [String: Any])
 
     }
     
@@ -43,8 +45,11 @@ enum App {
     enum Uri: String {
         /// 服务器基础Uri
         case BaseUri = "http://127.0.0.1:8181/Api/"
-         /// 首页分类标题
+        /// 首页分类标题
         case HomeCategoryList = "article/category"
+        /// 首页内容
+        case HomeCategoryContent = "article/content"
+        
     }
     
     // MARK: Methods
