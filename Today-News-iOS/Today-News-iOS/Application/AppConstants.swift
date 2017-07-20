@@ -35,7 +35,7 @@ enum App {
     /// 数据源
     enum DataSource {
         /// 首页分类标题
-        case HomeCategoryList([String: Any])
+        case HomeCategoryList
 
     }
     

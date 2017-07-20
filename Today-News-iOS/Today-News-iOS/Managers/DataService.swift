@@ -18,7 +18,8 @@ internal class DataService {
     /// HomeCategoryList
     class func homeCategoryList(_ uri: String, params:[String: Any], loadFinished: DataChecking?) {
         Alamofire.request(App.Uri.BaseUri.rawValue+uri, method: .get, parameters: params).responseJSON { (response) in
-            loadFinished?(response)
+            guard let JSON = response.result.value else { return }
+            loadFinished?(JSON)
         }
     }
 }

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04DE58DB1F205F3A005192B7 /* HomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58DA1F205F3A005192B7 /* HomeCategory.swift */; };
+		04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */; };
+		04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E11F2087B9005192B7 /* SEKView+Frame.swift */; };
+		04DE58E51F20880B005192B7 /* SegmentBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E41F20880B005192B7 /* SegmentBaseViewController.swift */; };
+		04DE58E81F2095D5005192B7 /* TopPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E61F2095D5005192B7 /* TopPageViewController.swift */; };
+		04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DE58E71F2095D5005192B7 /* TopicPageViewController.xib */; };
+		04DE58EB1F20A2D4005192B7 /* HomeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58EA1F20A2D4005192B7 /* HomeNavBarView.swift */; };
+		04DE58ED1F20A34B005192B7 /* HomeSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58EC1F20A34B005192B7 /* HomeSearchBar.swift */; };
 		04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9A7CA1F1F6F4500B8ED40 /* Assets.xcassets */; };
 		04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9A7D61F1F729000B8ED40 /* AppDelegate.swift */; };
 		04F9A7D91F1F729000B8ED40 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F9A7D71F1F729000B8ED40 /* Info.plist */; };
@@ -24,6 +32,15 @@
 
 /* Begin PBXFileReference section */
 		04496AFE1F1EF2D80025190A /* Today-News-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Today-News-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DE58DA1F205F3A005192B7 /* HomeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategory.swift; sourceTree = "<group>"; };
+		04DE58DC1F206075005192B7 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEKNavigationView.swift; sourceTree = "<group>"; };
+		04DE58E11F2087B9005192B7 /* SEKView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SEKView+Frame.swift"; sourceTree = "<group>"; };
+		04DE58E41F20880B005192B7 /* SegmentBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentBaseViewController.swift; sourceTree = "<group>"; };
+		04DE58E61F2095D5005192B7 /* TopPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPageViewController.swift; sourceTree = "<group>"; };
+		04DE58E71F2095D5005192B7 /* TopicPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicPageViewController.xib; sourceTree = "<group>"; };
+		04DE58EA1F20A2D4005192B7 /* HomeNavBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavBarView.swift; sourceTree = "<group>"; };
+		04DE58EC1F20A34B005192B7 /* HomeSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchBar.swift; sourceTree = "<group>"; };
 		04F9A7CA1F1F6F4500B8ED40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F9A7D61F1F729000B8ED40 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F9A7D71F1F729000B8ED40 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +91,7 @@
 		04496B001F1EF2D80025190A /* Today-News-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				04DE58DD1F2085F3005192B7 /* Components */,
 				04F9A8121F1FA3D100B8ED40 /* Managers */,
 				04F9A7C51F1F6C6700B8ED40 /* Src */,
 				04F9A7D51F1F729000B8ED40 /* Application */,
@@ -83,6 +101,32 @@
 				04F9A7C91F1F6EB600B8ED40 /* Resouces */,
 			);
 			path = "Today-News-iOS";
+			sourceTree = "<group>";
+		};
+		04DE58DD1F2085F3005192B7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				04DE58DE1F208608005192B7 /* Controls */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		04DE58DE1F208608005192B7 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				04DE58DF1F2087B9005192B7 /* SEKNavigationView */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		04DE58DF1F2087B9005192B7 /* SEKNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */,
+				04DE58E11F2087B9005192B7 /* SEKView+Frame.swift */,
+				04DE58E41F20880B005192B7 /* SegmentBaseViewController.swift */,
+			);
+			path = SEKNavigationView;
 			sourceTree = "<group>";
 		};
 		04F9A7C51F1F6C6700B8ED40 /* Src */ = {
@@ -112,6 +156,7 @@
 				04F9A7D61F1F729000B8ED40 /* AppDelegate.swift */,
 				04F9A7D71F1F729000B8ED40 /* Info.plist */,
 				04F9A8101F1FA04900B8ED40 /* AppConstants.swift */,
+				04DE58DC1F206075005192B7 /* BridgingHeader.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -167,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				04F9A8051F1F8F5500B8ED40 /* HomeViewController.swift */,
+				04DE58E61F2095D5005192B7 /* TopPageViewController.swift */,
+				04DE58E71F2095D5005192B7 /* TopicPageViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +221,7 @@
 		04F9A7F41F1F8F4100B8ED40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04DE58DA1F205F3A005192B7 /* HomeCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +229,8 @@
 		04F9A7F51F1F8F4100B8ED40 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04DE58EA1F20A2D4005192B7 /* HomeNavBarView.swift */,
+				04DE58EC1F20A34B005192B7 /* HomeSearchBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -379,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04F9A7D91F1F729000B8ED40 /* Info.plist in Resources */,
+				04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */,
 				04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +502,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */,
+				04DE58E51F20880B005192B7 /* SegmentBaseViewController.swift in Sources */,
 				04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */,
 				04F9A80F1F1F97AC00B8ED40 /* R.generated.swift in Sources */,
 				04F9A8041F1F8F4100B8ED40 /* MainViewController.swift in Sources */,
@@ -458,8 +511,13 @@
 				04F9A80C1F1F8FA300B8ED40 /* VideoViewController.swift in Sources */,
 				04F9A8081F1F8F6700B8ED40 /* MicroNewViewController.swift in Sources */,
 				04F9A8061F1F8F5500B8ED40 /* HomeViewController.swift in Sources */,
+				04DE58ED1F20A34B005192B7 /* HomeSearchBar.swift in Sources */,
 				04F9A8141F1FA3E300B8ED40 /* DataManager.swift in Sources */,
+				04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */,
+				04DE58DB1F205F3A005192B7 /* HomeCategory.swift in Sources */,
 				04F9A80A1F1F8F9900B8ED40 /* MineViewController.swift in Sources */,
+				04DE58EB1F20A2D4005192B7 /* HomeNavBarView.swift in Sources */,
+				04DE58E81F2095D5005192B7 /* TopPageViewController.swift in Sources */,
 				04F9A8161F1FA45C00B8ED40 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +629,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lovemo.www.Today-News-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Today-News-iOS/Application/BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -586,6 +645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lovemo.www.Today-News-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Today-News-iOS/Application/BridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
