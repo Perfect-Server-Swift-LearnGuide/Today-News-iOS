@@ -21,7 +21,7 @@ class HomeTopicViewCell: UITableViewCell {
     }()
     
     /// 特殊推荐: 广告、热、影视、置顶
-    lazy var recommLabel: UILabel = {
+    lazy var flagLabel: UILabel = {
         let label = UILabel()
         label.font = App.Font.Default.fontWithSize(size: 11)
         label.layer.cornerRadius = 2
@@ -73,25 +73,50 @@ class HomeTopicViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     
+        self.selectionStyle = .none
+        
         layoutUI()
         
         testUI()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+
+    
+}
+
+extension HomeTopicViewCell: ViewConfigurable {
+    
+    func viewSourceWithModel(_ model: AnyObject?, indexPath: IndexPath) {
+        guard let content = model as? HomeContent else {
+            return
+        }
+        
+        titleLabel.text = content.title
+        flagLabel.text = "置顶"
+        sourceLabel.text = content.source
+        commentLabel.text = "\(123)评论"
+        timeLabel.text = content.createtime
+
+    }
+    
+}
+
+// MARK: - UI布局
+extension HomeTopicViewCell {
     func layoutUI() {
+        
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView).offset(15)
             make.right.equalTo(self.contentView).offset(-30)
             make.top.equalTo(self.contentView).offset(18)
-//            make.bottom.equalTo(10)
-
         }
         
-        recommLabel.snp.makeConstraints { (make) in
+        flagLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.titleLabel)
             make.top.equalTo(self.titleLabel.snp.bottom).offset(5)
             make.height.equalTo(14)
@@ -99,7 +124,7 @@ class HomeTopicViewCell: UITableViewCell {
         }
         
         sourceLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(self.recommLabel.snp.right).offset(5)
+            make.left.equalTo(self.flagLabel.snp.right).offset(5)
             make.top.equalTo(self.titleLabel.snp.bottom).offset(5)
             make.height.equalTo(14)
         }
@@ -121,29 +146,11 @@ class HomeTopicViewCell: UITableViewCell {
             make.top.equalTo(self.titleLabel.snp.bottom).offset(5)
             make.width.equalTo(17)
             make.height.equalTo(14)
-            make.bottom.equalTo(self.contentView)
+            make.bottom.equalTo(self.contentView).offset(-14)
         }
     }
     
     func testUI() {
-        titleLabel.backgroundColor = UIColor.green
+        //        titleLabel.backgroundColor = UIColor.green
     }
-    
-}
-
-extension HomeTopicViewCell: ViewConfigurable {
-    
-    func viewSourceWithModel(_ model: AnyObject?, indexPath: IndexPath) {
-        guard let content = model as? HomeContent else {
-            return
-        }
-        
-        titleLabel.text = content.title
-        recommLabel.text = "置顶"
-        sourceLabel.text = "央视新闻"
-        commentLabel.text = "\(123)评论"
-        timeLabel.text = "刚刚"
-        
-    }
-    
 }

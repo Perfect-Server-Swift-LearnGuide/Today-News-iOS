@@ -57,13 +57,13 @@ extension TopicPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-//        guard let data = contents[indexPath.row] as AnyObject? else { fatalError("解析数据失败") }
-//        return tableView.fd_heightForCell(withIdentifier: data.identifier, cacheBy: indexPath) { cell in
-//            if let cell = cell as? ViewConfigurable {
-//                cell.viewSourceWithModel!(data, indexPath: indexPath as IndexPath)
-//            }
-//        }
+
+        guard let data = contents[indexPath.row] as AnyObject? else { fatalError("解析数据失败") }
+        return tableView.fd_heightForCell(withIdentifier:  String(describing: HomeTopicViewCell.self), cacheBy: indexPath) { cell in
+            if let cell = cell as? ViewConfigurable {
+                cell.viewSourceWithModel!(data, indexPath: indexPath as IndexPath)
+            }
+        }
 
     }
     

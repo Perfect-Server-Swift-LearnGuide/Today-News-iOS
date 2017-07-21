@@ -56,7 +56,7 @@ enum App {
     /// 服务器基础 URi
     enum Uri: String {
         /// 服务器基础Uri
-        case BaseUri = "http://127.0.0.1:8181/Api/"
+        case BaseUri = "http://lovemo.frp1.chuantou.org/Api/"
         /// 首页分类标题
         case HomeCategoryList = "article/category"
         /// 首页内容

@@ -15,4 +15,6 @@ class HomeContent: NSObject {
     var title = ""
     /// 文章类型
     var type = 1
+    /// 文章来源
+    var source = ""
 }
