@@ -8,43 +8,98 @@
 
 import UIKit
 import UITableView_FDTemplateLayoutCell
+import MJRefresh
 
 class TopicPageViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     /// 文章内容
-    lazy var contents = NSMutableArray()
-    
+    lazy var contents: NSMutableArray = NSMutableArray()
     /// 文章类型
     public var type = 1
+    /// 当前页码
+    var page = 1
+    /// 上次选中的索引(或者控制器)
+    var lastSelectedIndex = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        automaticallyAdjustsScrollViewInsets = false
         
-        DataManager.dataFromSource(source: .HomeCategoryContent(params: ["type" : "\(self.type)"]), loadFinished: { (response) in
-            
+        // 初始化设置tableView
+        setupTableView()
+ 
+    }
+
+}
+
+//MARK: - load data
+extension TopicPageViewController {
+    func loadNewData() {
+        tableView.mj_footer.endRefreshing()
+        tableView.mj_footer.resetNoMoreData()
+        
+        self.page = 1
+        let params:[String: Any] = [
+            "type" : self.type,
+            "page" : self.page
+        ]
+        DataManager.dataFromSource(source: .HomeCategoryContent(params: params), loadFinished: { (response) in
             if let data = response as? [String: AnyObject], let json = data["data"] {
                 self.contents = HomeContent.mj_objectArray(withKeyValuesArray: json)
                 self.tableView.reloadData()
             }
+            self.tableView.mj_header.endRefreshing()
         })
         
-        automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    func loadMoreData() {
+        tableView.mj_header.endRefreshing()
+        let page = self.page + 1
+        let params:[String: Any] = [
+            "type" : self.type,
+            "page" : page
+        ]
+        DataManager.dataFromSource(source: .HomeCategoryContent(params: params), loadFinished: { (response) in
+            if let data = response as? [String: AnyObject], let json = data["data"] {
+                let contents = HomeContent.mj_objectArray(withKeyValuesArray: json) as [AnyObject]
+                self.contents.addObjects(from: contents)
+                self.tableView.reloadData()
+            }
+            if let data = response as? [String: AnyObject], let total = data["total"] as? Int {
+                if self.contents.count == total {
+                    self.tableView.mj_footer.endRefreshingWithNoMoreData()
+                }
+            } else {
+                self.tableView.mj_footer.endRefreshing()
+            }
+            self.page = page
+        })
+    }
+}
+
+//MARK: - setup TableView
+extension TopicPageViewController {
+    func setupTableView() {
+        tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(TopicPageViewController.loadNewData))
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(TopicPageViewController.loadMoreData))
+        tableView.mj_header.isAutomaticallyChangeAlpha = true
+        tableView.mj_header.beginRefreshing()
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 49, right: 0)
         tableView.register(HomeTopicViewCell.classForCoder(), forCellReuseIdentifier: String(describing: HomeTopicViewCell.self))
-        
         tableView.tableFooterView = UIView()
     }
-
-
 }
 
 //MARK: - tableView dataSource
 extension TopicPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.mj_footer.isHidden = (contents.count == 0)
         return contents.count
     }
     
@@ -64,12 +119,13 @@ extension TopicPageViewController: UITableViewDataSource {
                 cell.viewSourceWithModel!(data, indexPath: indexPath as IndexPath)
             }
         }
-
     }
     
 }
 
 //MARK: - tableView delegate
 extension TopicPageViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }

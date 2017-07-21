@@ -29,23 +29,8 @@ class HomeViewController: SegmentBaseViewController {
         setupNavBar()
         // 设置导航试图
         setupNavView()
-
-        DataManager.dataFromSource(source: .HomeCategoryList, loadFinished: {(response) in
-        
-            if let data = response as? [String: AnyObject], let json = data["data"] {
-                let categories = HomeCategory.mj_objectArray(withKeyValuesArray: json)
-                self.categories = categories as AnyObject as! [HomeCategory]
-                
-                let titles = self.categories.map({ model in
-                    model.title
-                })
-                self.topNavView.titles = titles
-                self.setupChildVces(self.categories)
-                // 底部的scrollView
-                self.setupContentView()
-            }
-            
-        })
+        // 获取分类数据
+        loadCategory()
 
     }
     
@@ -54,12 +39,63 @@ class HomeViewController: SegmentBaseViewController {
         navigationController?.navigationBar.barTintColor = App.Color.MainRed.color
     }
     
+}
+
+// MARK: - load data
+extension HomeViewController {
+    func loadCategory() {
+        DataManager.dataFromSource(source: .HomeCategoryList, loadFinished: {(response) in
+            if let data = response as? [String: AnyObject], let json = data["data"] {
+                let categories = HomeCategory.mj_objectArray(withKeyValuesArray: json)
+                self.categories = categories as AnyObject as! [HomeCategory]
+                let titles = self.categories.map({ model in
+                    model.title
+                })
+                self.topNavView.titles = titles
+                self.setupChildVces(self.categories)
+                // 底部的scrollView
+                self.setupContentView()
+            }
+        })
+    }
+}
+
+// MARK: - StatusBarStyle
+extension HomeViewController {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension HomeViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        navigationController?.pushViewController(UIViewController(), animated: false)
+        return true
+    }
+}
+
+// MARK: - Help func
+extension HomeViewController {
+    fileprivate func randomColor() -> UIColor {
+        let red = CGFloat(arc4random_uniform(256)) / 255.0
+        let green = CGFloat(arc4random_uniform(256)) / 255.0
+        let blue = CGFloat(arc4random_uniform(256)) / 255.0
+        let alpha = CGFloat(1.0)
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+
+}
+
+// MARK: - setup UI 
+extension HomeViewController {
     /// 设置导航栏
     fileprivate func setupNavBar() {
         navigationController?.navigationBar.barStyle = .black
         navigationItem.titleView = homeNavigationBar
     }
-
+    
     /// 设置导航视图
     fileprivate func setupNavView() {
         topNavView.frame = CGRect(x: 0, y: 64, width: self.view.width, height: 35)
@@ -96,35 +132,4 @@ class HomeViewController: SegmentBaseViewController {
         // 添加第一个控制器的view
         self.scrollViewDidEndScrollingAnimation(contentView)
     }
-    
-    
-
-}
-
-extension HomeViewController {
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-}
-
-// MARK: - UITextFieldDelegate
-extension HomeViewController: UITextFieldDelegate {
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        navigationController?.pushViewController(UIViewController(), animated: false)
-        return true
-    }
-}
-
-// MARK: - Help func
-
-extension HomeViewController {
-    fileprivate func randomColor() -> UIColor {
-        let red = CGFloat(arc4random_uniform(256)) / 255.0
-        let green = CGFloat(arc4random_uniform(256)) / 255.0
-        let blue = CGFloat(arc4random_uniform(256)) / 255.0
-        let alpha = CGFloat(1.0)
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
-    }
-
 }
