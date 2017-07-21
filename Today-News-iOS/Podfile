@@ -25,6 +25,12 @@ target 'Today-News-iOS' do
 
   # SwiftNotificationCenter - 类型安全的通知中心
   pod 'SwiftNotificationCenter'
+  
+  # SwiftHEXColors - 颜色
+  pod 'SwiftHEXColors'
+  
+  # UITableView+FDTemplateLayoutCell  - 自动缓存算高
+  pod 'UITableView+FDTemplateLayoutCell'
 
   ## 控件库
 

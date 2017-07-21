@@ -40,7 +40,7 @@ class HomeNavBarView: UIView {
     
     /// 今日头条 图片
     lazy var toutiaoImageView: UIImageView = {
-        let toutiaoImageView = UIImageView(image: UIImage(named: "title_72x20_"))
+        let toutiaoImageView = UIImageView(image: R.image.title_72x20_())
         toutiaoImageView.contentMode = .scaleAspectFill
         return toutiaoImageView
     }()
@@ -49,7 +49,7 @@ class HomeNavBarView: UIView {
     lazy var searchBar: HomeSearchBar = {
         let searchBar = HomeSearchBar.searchBar()
         searchBar.placeholder = "搜你想搜的"
-        searchBar.background = UIImage(named: "searchbox_search_20x28_")
+        searchBar.background = R.image.searchbox_search_20x28_()
         return searchBar
     }()
     

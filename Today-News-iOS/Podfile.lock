@@ -11,7 +11,9 @@ PODS:
   - RKNotificationHub (2.0.4)
   - SnapKit (3.2.0)
   - SVProgressHUD (2.1.2)
+  - SwiftHEXColors (1.1.0)
   - SwiftNotificationCenter (1.0.2)
+  - UITableView+FDTemplateLayoutCell (1.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -24,7 +26,9 @@ DEPENDENCIES:
   - RKNotificationHub
   - SnapKit
   - SVProgressHUD
+  - SwiftHEXColors
   - SwiftNotificationCenter
+  - UITableView+FDTemplateLayoutCell
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
@@ -38,8 +42,10 @@ SPEC CHECKSUMS:
   RKNotificationHub: 3765424499139c3d3885b681bb0837f072d12ae6
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
   SwiftNotificationCenter: d108168dcbb6b804804cc22d5848733c3ca7ff5b
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
 
-PODFILE CHECKSUM: 9049f93ba0210a6655cd45dbaa3b60841b92640d
+PODFILE CHECKSUM: a42e7aa651822260f2329a8fb953ce592a838c03
 
 COCOAPODS: 1.2.0

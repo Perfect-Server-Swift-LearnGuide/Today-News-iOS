@@ -32,8 +32,8 @@ class HomeViewController: SegmentBaseViewController {
 
         DataManager.dataFromSource(source: .HomeCategoryList, loadFinished: {(response) in
         
-            if let data = response as? [String: AnyObject] {
-                let categories = HomeCategory.mj_objectArray(withKeyValuesArray: data["data"])
+            if let data = response as? [String: AnyObject], let json = data["data"] {
+                let categories = HomeCategory.mj_objectArray(withKeyValuesArray: json)
                 self.categories = categories as AnyObject as! [HomeCategory]
                 
                 let titles = self.categories.map({ model in
@@ -51,7 +51,7 @@ class HomeViewController: SegmentBaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barTintColor = UIColor(red: 210 / 255.0, green: 63 / 255.0, blue: 66 / 255.0, alpha: 1.0)
+        navigationController?.navigationBar.barTintColor = App.Color.MainRed.color
     }
     
     /// 设置导航栏
@@ -66,7 +66,7 @@ class HomeViewController: SegmentBaseViewController {
         topNavView.backgroundColor = UIColor.white
         topNavView.delegate = self
         topNavView.titleButtonNormalColor = UIColor(red: 34 / 255.0, green: 34 / 255.0, blue: 34 / 255.0, alpha: 1.0)
-        topNavView.titleButtonDisabledColor = UIColor(red: 210 / 255.0, green: 63 / 255.0, blue: 66 / 255.0, alpha: 1.0)
+        topNavView.titleButtonDisabledColor = App.Color.MainRed.color
         topNavView.titleButtonTitleFont = App.Font.Default.fontWithSize(size: 16)
         topNavView.titlesViewW = topNavView.width
         view.addSubview(topNavView)
@@ -82,7 +82,6 @@ class HomeViewController: SegmentBaseViewController {
     
     /// 初始化子控制器
     fileprivate func setupChildVces(_ models:[HomeCategory]) {
-
         for model in models {
             let topic = TopicPageViewController()
             topic.type = model.type

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftHEXColors
 
 
 enum App {
@@ -30,6 +31,17 @@ enum App {
         func fontWithSize(size: CGFloat, ofType type: Style = .Regular) -> UIFont {
             return UIFont(name: "\(self.rawValue)-\(String(describing: type))", size: size) ?? UIFont.systemFont(ofSize: size)
         }
+    }
+    
+    /// 颜色
+    enum Color: String {
+        /// 全局红
+        case MainRed = "#D23F42"
+        /// 小标题灰
+        case MainGray = "#999999"
+        
+        /// 获取颜色
+        var color: UIColor { return UIColor(hexString: rawValue) ?? UIColor.clear }
     }
     
     /// 数据源

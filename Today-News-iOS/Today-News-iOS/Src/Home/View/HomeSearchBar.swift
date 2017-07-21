@@ -14,7 +14,7 @@ class HomeSearchBar: UITextField {
         super.init(frame: frame)
         
         let searchIcon = UIImageView()
-        searchIcon.image = UIImage(named: "searchicon_search_20x20_")
+        searchIcon.image = R.image.searchicon_search_20x20_()
         searchIcon.width = 30
         searchIcon.height = 30
         searchIcon.contentMode = .center
