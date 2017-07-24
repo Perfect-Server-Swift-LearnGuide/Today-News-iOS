@@ -99,7 +99,7 @@ extension HomeTopicViewCell: ViewConfigurable {
         titleLabel.text = content.title
         flagLabel.text = "置顶"
         sourceLabel.text = content.source
-        commentLabel.text = "\(123)评论"
+        commentLabel.text = "\(content.comment_count)评论"
         timeLabel.text = content.createtime
 
     }

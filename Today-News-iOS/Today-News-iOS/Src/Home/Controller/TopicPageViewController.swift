@@ -52,7 +52,14 @@ extension TopicPageViewController {
                 self.contents = HomeContent.mj_objectArray(withKeyValuesArray: json)
                 self.tableView.reloadData()
             }
+            
             self.tableView.mj_header.endRefreshing()
+            if let data = response as? [String: AnyObject], let total = data["total"] as? Int {
+                if self.contents.count == total {
+                    self.tableView.mj_footer.endRefreshingWithNoMoreData()
+                }
+            }
+
         })
         
     }
@@ -89,7 +96,7 @@ extension TopicPageViewController {
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(TopicPageViewController.loadMoreData))
         tableView.mj_header.isAutomaticallyChangeAlpha = true
         tableView.mj_header.beginRefreshing()
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 49, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 88, right: 0)
         tableView.register(HomeTopicViewCell.classForCoder(), forCellReuseIdentifier: String(describing: HomeTopicViewCell.self))
         tableView.tableFooterView = UIView()
     }

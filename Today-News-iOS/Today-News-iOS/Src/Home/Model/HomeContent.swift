@@ -17,4 +17,6 @@ class HomeContent: NSObject {
     var type = 1
     /// 文章来源
     var source = ""
+    /// 评论数量
+    var comment_count = 0
 }
