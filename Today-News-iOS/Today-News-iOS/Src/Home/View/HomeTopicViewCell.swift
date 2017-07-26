@@ -70,6 +70,15 @@ class HomeTopicViewCell: UITableViewCell {
         return button
     }()
     
+    /// 图片视图
+    lazy var topicPhotosView: HomeTopicPhotosView = {
+        let photosView = HomeTopicPhotosView()
+        photosView.backgroundColor = UIColor.white
+        photosView.isHidden = true
+        self.contentView.addSubview(photosView)
+        return photosView
+    }()
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     
@@ -101,7 +110,20 @@ extension HomeTopicViewCell: ViewConfigurable {
         sourceLabel.text = content.source
         commentLabel.text = "\(content.comment_count)评论"
         timeLabel.text = content.createtime
-
+        if content.thumbnails.count > 0 {
+            topicPhotosView.isHidden = false
+            topicPhotosView.photos = content.thumbnails
+            self.contentView.snp.remakeConstraints { (make) in
+                make.edges.equalTo(self.snp.edges)
+                make.bottom.equalTo(topicPhotosView).offset(14)
+            }
+        } else {
+            topicPhotosView.isHidden = true
+            self.contentView.snp.remakeConstraints { (make) in
+                make.edges.equalTo(self.snp.edges)
+                make.bottom.equalTo(deleteButton).offset(14)
+            }
+        }
     }
     
 }
@@ -109,6 +131,11 @@ extension HomeTopicViewCell: ViewConfigurable {
 // MARK: - UI布局
 extension HomeTopicViewCell {
     func layoutUI() {
+        
+        self.contentView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.snp.edges)
+            make.bottom.equalTo(deleteButton).offset(14)
+        }
         
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalTo(self.contentView).offset(15)
@@ -146,8 +173,15 @@ extension HomeTopicViewCell {
             make.top.equalTo(self.titleLabel.snp.bottom).offset(5)
             make.width.equalTo(17)
             make.height.equalTo(14)
-            make.bottom.equalTo(self.contentView).offset(-14)
         }
+        
+        topicPhotosView.snp.makeConstraints { (make) in
+            make.left.equalTo(titleLabel)
+            make.right.equalTo(self.contentView).offset(-30)
+            make.height.equalTo(62)
+            make.top.equalTo(timeLabel.snp.bottom).offset(5)
+        }
+        
     }
     
     func testUI() {

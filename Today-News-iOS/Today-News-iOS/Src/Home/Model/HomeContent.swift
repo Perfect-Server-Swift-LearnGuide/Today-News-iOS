@@ -19,4 +19,6 @@ class HomeContent: NSObject {
     var source = ""
     /// 评论数量
     var comment_count = 0
+    /// 文章图片
+    var thumbnails: [String] = []
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04151C0C1F28708B007D55C3 /* HomeTopicPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04151C0B1F28708B007D55C3 /* HomeTopicPhotosView.swift */; };
+		04151C0E1F28E448007D55C3 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04151C0D1F28E448007D55C3 /* MineViewController.xib */; };
 		04DE58DB1F205F3A005192B7 /* HomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58DA1F205F3A005192B7 /* HomeCategory.swift */; };
 		04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */; };
 		04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E11F2087B9005192B7 /* SEKView+Frame.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04151C0B1F28708B007D55C3 /* HomeTopicPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicPhotosView.swift; sourceTree = "<group>"; };
+		04151C0D1F28E448007D55C3 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		04496AFE1F1EF2D80025190A /* Today-News-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Today-News-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DE58DA1F205F3A005192B7 /* HomeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategory.swift; sourceTree = "<group>"; };
 		04DE58DC1F206075005192B7 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 				04DE58EA1F20A2D4005192B7 /* HomeNavBarView.swift */,
 				04DE58EC1F20A34B005192B7 /* HomeSearchBar.swift */,
 				04DE5AB71F20DDC2005192B7 /* HomeTopicViewCell.swift */,
+				04151C0B1F28708B007D55C3 /* HomeTopicPhotosView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				04F9A8091F1F8F9900B8ED40 /* MineViewController.swift */,
+				04151C0D1F28E448007D55C3 /* MineViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 				04F9A7D91F1F729000B8ED40 /* Info.plist in Resources */,
 				04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */,
 				04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */,
+				04151C0E1F28E448007D55C3 /* MineViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +529,7 @@
 				04F9A8061F1F8F5500B8ED40 /* HomeViewController.swift in Sources */,
 				04DE58ED1F20A34B005192B7 /* HomeSearchBar.swift in Sources */,
 				04DE5ABA1F20E0E7005192B7 /* ViewConfigurable.swift in Sources */,
+				04151C0C1F28708B007D55C3 /* HomeTopicPhotosView.swift in Sources */,
 				04DE5AB61F20D9A0005192B7 /* HomeContent.swift in Sources */,
 				04F9A8141F1FA3E300B8ED40 /* DataManager.swift in Sources */,
 				04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */,
