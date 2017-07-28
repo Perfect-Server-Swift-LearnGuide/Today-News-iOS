@@ -153,6 +153,8 @@ extension MineViewController: NoLoginHeaderViewDelegate {
     /// 更多登录方式按钮点击
     func moreLoginButotnClicked() {
         let moreLoginVC = MoreLoginViewController()
+        moreLoginVC.modalPresentationStyle = .custom
+        moreLoginVC.transitioningDelegate = Transition.shareManager()
         present(moreLoginVC, animated: true, completion: nil)
     }
 }
