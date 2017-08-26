@@ -55,7 +55,7 @@ enum App {
         /// 首页内容
         case HomeCategoryContent(params: [String: Any])
         /// 用户-我的
-        case UserTabs
+        case UserTab
     }
     
     /// 服务器基础 URi
@@ -68,7 +68,7 @@ enum App {
         /// 首页内容
         case HomeCategoryContent = "article/content"
         /// 用户-我的
-        case UserTabs = "user/tabs"
+        case UserTab = "user/tab"
         
     }
     

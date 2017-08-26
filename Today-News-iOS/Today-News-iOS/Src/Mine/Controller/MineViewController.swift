@@ -57,7 +57,7 @@ class MineViewController: UIViewController {
 // MARK: - data
 extension MineViewController {
     func loadData() {
-        DataManager.dataFromSource(source: .UserTabs, loadFinished: {(response) in
+        DataManager.dataFromSource(source: .UserTab, loadFinished: {(response) in
             if let data = response as? [String: AnyObject], let json = data["data"], let sections = json["sections"] as? [Any] {
                 for section in sections {
                     if let sec = section as? [AnyObject] {
@@ -87,6 +87,7 @@ extension MineViewController {
         tableView.tableFooterView = UIView()
     }
 }
+
 // MARK: - tableView dataSource
 extension MineViewController: UITableViewDataSource {
     
@@ -119,7 +120,7 @@ extension MineViewController: UITableViewDataSource {
 // MARK: - tableView delegate
 extension MineViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
