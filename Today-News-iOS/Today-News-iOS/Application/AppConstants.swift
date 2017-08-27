@@ -43,6 +43,10 @@ enum App {
         case MainBgGray = "#F5F5F5"
         /// 表格分割线
         case MainTableSepGray = "#F0F0F0"
+        /// 黑色
+        case Black = "#000000"
+        /// 搜索取消蓝色
+        case LightBlue = "#288DCE"
         
         /// 获取颜色
         var color: UIColor { return UIColor(hexString: rawValue) ?? UIColor.clear }
@@ -56,6 +60,10 @@ enum App {
         case HomeCategoryContent(params: [String: Any])
         /// 用户-我的
         case UserTab
+        /// 用户注册
+        case Register(params: [String: Any])
+        /// 用户登录
+        case Login(params: [String: Any])
     }
     
     /// 服务器基础 URi
@@ -69,6 +77,10 @@ enum App {
         case HomeCategoryContent = "article/content"
         /// 用户-我的
         case UserTab = "user/tab"
+        /// 用户-注册
+        case Register = "user/register"
+        /// 用户-登录
+        case Login = "user/login"
         
     }
     

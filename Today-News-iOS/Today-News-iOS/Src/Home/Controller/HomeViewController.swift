@@ -71,7 +71,9 @@ extension HomeViewController {
 extension HomeViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        navigationController?.pushViewController(UIViewController(), animated: false)
+        let search = SearchViewController()
+        search.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(search, animated: true)
         return true
     }
 }

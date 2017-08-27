@@ -35,7 +35,7 @@
                     </constraints>
                     <state key="normal" image="close_sdk_login_14x14_"/>
                     <connections>
-                        <action selector="closeLoginViewButtonClicked" destination="-1" eventType="touchUpInside" id="0Xg-8H-eI1"/>
+                        <action selector="closeLoginAction" destination="-1" eventType="touchUpInside" id="8IG-5Z-HxE"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录你的头条，精彩永不消失" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrG-tK-O4P">
@@ -208,6 +208,9 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="loginAction" destination="-1" eventType="touchUpInside" id="gqx-xq-LrY"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odB-hr-ia9">
                     <rect key="frame" x="147.5" y="318" width="80" height="28"/>
@@ -216,7 +219,7 @@
                         <color key="titleColor" red="0.28235294119999998" green="0.41960784309999999" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
-                        <action selector="loginModeButonClicked:" destination="-1" eventType="touchUpInside" id="h6M-rY-vFn"/>
+                        <action selector="loginModeAction:" destination="-1" eventType="touchUpInside" id="Mza-bD-qep"/>
                     </connections>
                 </button>
             </subviews>

@@ -15,6 +15,11 @@
 		047A153B1F2B16F000FD762F /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A15371F2B16F000FD762F /* AnimatedTransitioning.swift */; };
 		047A153C1F2B16F000FD762F /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A15381F2B16F000FD762F /* PresentationController.swift */; };
 		047A153E1F2B16F000FD762F /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A153A1F2B16F000FD762F /* Transition.swift */; };
+		04D5D7CE1F52C56C00F85919 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D7CD1F52C56C00F85919 /* SearchViewController.swift */; };
+		04D5D7D01F52C69800F85919 /* SearchNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D7CF1F52C69800F85919 /* SearchNavigationView.swift */; };
+		04D5D7D21F52CA3700F85919 /* SearchDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D7D11F52CA3700F85919 /* SearchDefaultView.swift */; };
+		04D5D7D41F52CA7900F85919 /* SearchDefaultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D5D7D31F52CA7900F85919 /* SearchDefaultView.xib */; };
+		04D5D7D71F52D54800F85919 /* CheckTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D7D61F52D54800F85919 /* CheckTool.swift */; };
 		04DE58DB1F205F3A005192B7 /* HomeCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58DA1F205F3A005192B7 /* HomeCategory.swift */; };
 		04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */; };
 		04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE58E11F2087B9005192B7 /* SEKView+Frame.swift */; };
@@ -57,6 +62,11 @@
 		047A15371F2B16F000FD762F /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		047A15381F2B16F000FD762F /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		047A153A1F2B16F000FD762F /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		04D5D7CD1F52C56C00F85919 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		04D5D7CF1F52C69800F85919 /* SearchNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNavigationView.swift; sourceTree = "<group>"; };
+		04D5D7D11F52CA3700F85919 /* SearchDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDefaultView.swift; sourceTree = "<group>"; };
+		04D5D7D31F52CA7900F85919 /* SearchDefaultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchDefaultView.xib; sourceTree = "<group>"; };
+		04D5D7D61F52D54800F85919 /* CheckTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTool.swift; sourceTree = "<group>"; };
 		04DE58DA1F205F3A005192B7 /* HomeCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategory.swift; sourceTree = "<group>"; };
 		04DE58DC1F206075005192B7 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		04DE58E01F2087B9005192B7 /* SEKNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SEKNavigationView.swift; sourceTree = "<group>"; };
@@ -147,10 +157,54 @@
 			path = SMKTransition;
 			sourceTree = "<group>";
 		};
+		04D5D7C91F52C54B00F85919 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				04D5D7CA1F52C54B00F85919 /* Controller */,
+				04D5D7CB1F52C54B00F85919 /* Model */,
+				04D5D7CC1F52C54B00F85919 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		04D5D7CA1F52C54B00F85919 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04D5D7CD1F52C56C00F85919 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04D5D7CB1F52C54B00F85919 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04D5D7CC1F52C54B00F85919 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04D5D7CF1F52C69800F85919 /* SearchNavigationView.swift */,
+				04D5D7D11F52CA3700F85919 /* SearchDefaultView.swift */,
+				04D5D7D31F52CA7900F85919 /* SearchDefaultView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04D5D7D51F52D52D00F85919 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04D5D7D61F52D54800F85919 /* CheckTool.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		04DE58DD1F2085F3005192B7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				04DE58DE1F208608005192B7 /* Controls */,
+				04D5D7D51F52D52D00F85919 /* Utils */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -177,6 +231,7 @@
 		04F9A7C51F1F6C6700B8ED40 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				04D5D7C91F52C54B00F85919 /* Search */,
 				04F9A7F21F1F8F4100B8ED40 /* Home */,
 				04F9A7F61F1F8F4100B8ED40 /* Main */,
 				04F9A7F81F1F8F4100B8ED40 /* MicroNew */,
@@ -491,6 +546,7 @@
 				04F594571F29EBD9006B8D16 /* MoreLoginViewController.xib in Resources */,
 				04F594511F29CAAF006B8D16 /* MineNoLoginHeaderView.xib in Resources */,
 				04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */,
+				04D5D7D41F52CA7900F85919 /* SearchDefaultView.xib in Resources */,
 				04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */,
 				0468D5911F29B22200C08093 /* MineCell.xib in Resources */,
 				04151C0E1F28E448007D55C3 /* MineViewController.xib in Resources */,
@@ -569,9 +625,11 @@
 				04DE58E51F20880B005192B7 /* SegmentBaseViewController.swift in Sources */,
 				0468D58D1F29AB3500C08093 /* MineCellModel.swift in Sources */,
 				04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */,
+				04D5D7D71F52D54800F85919 /* CheckTool.swift in Sources */,
 				04F9A80F1F1F97AC00B8ED40 /* R.generated.swift in Sources */,
 				04F9A8041F1F8F4100B8ED40 /* MainViewController.swift in Sources */,
 				047A153B1F2B16F000FD762F /* AnimatedTransitioning.swift in Sources */,
+				04D5D7CE1F52C56C00F85919 /* SearchViewController.swift in Sources */,
 				04F9A8111F1FA04900B8ED40 /* AppConstants.swift in Sources */,
 				04F9A80C1F1F8FA300B8ED40 /* VideoViewController.swift in Sources */,
 				047A153E1F2B16F000FD762F /* Transition.swift in Sources */,
@@ -582,10 +640,12 @@
 				04DE58ED1F20A34B005192B7 /* HomeSearchBar.swift in Sources */,
 				04DE5ABA1F20E0E7005192B7 /* ViewConfigurable.swift in Sources */,
 				04151C0C1F28708B007D55C3 /* HomeTopicPhotosView.swift in Sources */,
+				04D5D7D21F52CA3700F85919 /* SearchDefaultView.swift in Sources */,
 				04DE5AB61F20D9A0005192B7 /* HomeContent.swift in Sources */,
 				04F9A8141F1FA3E300B8ED40 /* DataManager.swift in Sources */,
 				04F594561F29EBD9006B8D16 /* MoreLoginViewController.swift in Sources */,
 				04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */,
+				04D5D7D01F52C69800F85919 /* SearchNavigationView.swift in Sources */,
 				04DE58DB1F205F3A005192B7 /* HomeCategory.swift in Sources */,
 				04DE5AB81F20DDC2005192B7 /* HomeTopicViewCell.swift in Sources */,
 				04F9A80A1F1F8F9900B8ED40 /* MineViewController.swift in Sources */,

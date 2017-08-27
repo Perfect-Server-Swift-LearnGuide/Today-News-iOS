@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class MoreLoginViewController: UIViewController {
 
@@ -38,17 +39,39 @@ class MoreLoginViewController: UIViewController {
 
 extension MoreLoginViewController {
     /// 关闭按钮点击
-    @IBAction func closeLoginViewButtonClicked() {
+    @IBAction func closeLoginAction() {
         dismiss(animated: true, completion: nil)
     }
     
     /// 进入头条按钮点击
-    @IBAction func goInTouTiaoButtonClicked() {
+    @IBAction func loginAction() {
         
+        // 检测手机号
+        if !CheckTool.shaerCheck().checkPhone(phone: mobileTextField.text!) {
+            SVProgressHUD.showError(withStatus: "手机号格式不正确")
+            return
+        }
+        
+        if topLabel.text == "帐号密码登录" {
+            
+        } else {
+            let params:[String: Any] = [
+                "phone" : mobileTextField.text!,
+                "code" : passwordTextField.text!
+            ]
+            DataManager.dataFromSource(source: .Register(params: params), loadFinished: { (response) in
+                if let data = response as? [String: AnyObject], let json = data["result"] {
+                    
+                    SVProgressHUD.showInfo(withStatus: json["msg"] as! String)
+                    print(json)
+                }
+                
+            })
+        }
     }
     
     /// 登录方式按钮点击
-    @IBAction func loginModeButonClicked(_ sender: UIButton) {
+    @IBAction func loginModeAction(_ sender: UIButton) {
         loginModeButton.isSelected = !sender.isSelected
         verifyCodeView.isHidden = sender.isSelected
         findPasswordView.isHidden = !sender.isSelected

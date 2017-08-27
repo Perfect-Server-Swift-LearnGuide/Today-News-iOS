@@ -25,6 +25,12 @@ class DataManager {
         case .UserTab:
             DataService.userTabs(App.Uri.UserTab.rawValue, params: [:], loadFinished: loadFinished)
             
+        case let .Register(params):
+            DataService.register(App.Uri.Register.rawValue, params: params, loadFinished: loadFinished)
+        
+        case let .Login(params):
+            DataService.register(App.Uri.Login.rawValue, params: params, loadFinished: loadFinished)
+            
         default:
             break
         }
