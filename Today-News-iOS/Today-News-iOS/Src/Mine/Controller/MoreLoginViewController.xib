@@ -51,7 +51,7 @@
                             <rect key="frame" x="22" y="13.5" width="198" height="17"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6b-OA-fw2" userLabel="发送验证码">
                             <rect key="frame" x="220" y="0.0" width="95" height="44"/>

@@ -15,6 +15,8 @@
 		047A153B1F2B16F000FD762F /* AnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A15371F2B16F000FD762F /* AnimatedTransitioning.swift */; };
 		047A153C1F2B16F000FD762F /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A15381F2B16F000FD762F /* PresentationController.swift */; };
 		047A153E1F2B16F000FD762F /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A153A1F2B16F000FD762F /* Transition.swift */; };
+		049D9CE01F556189007AFC45 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9CDF1F556189007AFC45 /* Detail.swift */; };
+		049D9CE21F557B9A007AFC45 /* NavigatorConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9CE11F557B9A007AFC45 /* NavigatorConfigurable.swift */; };
 		04D5D7CE1F52C56C00F85919 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D7CD1F52C56C00F85919 /* SearchViewController.swift */; };
 		04D5D7D01F52C69800F85919 /* SearchNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D7CF1F52C69800F85919 /* SearchNavigationView.swift */; };
 		04D5D7D21F52CA3700F85919 /* SearchDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5D7D11F52CA3700F85919 /* SearchDefaultView.swift */; };
@@ -49,6 +51,8 @@
 		04F9A8111F1FA04900B8ED40 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9A8101F1FA04900B8ED40 /* AppConstants.swift */; };
 		04F9A8141F1FA3E300B8ED40 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9A8131F1FA3E300B8ED40 /* DataManager.swift */; };
 		04F9A8161F1FA45C00B8ED40 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9A8151F1FA45C00B8ED40 /* DataService.swift */; };
+		04FBF1DF1F5413F2001B55FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBF1DD1F5413F2001B55FD /* DetailViewController.swift */; };
+		04FBF1E01F5413F3001B55FD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FBF1DE1F5413F2001B55FD /* DetailViewController.xib */; };
 		37A749EBA32C87BDFEFE4C52 /* Pods_Today_News_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977FEA0A9E37DD8DC368BC55 /* Pods_Today_News_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,8 @@
 		047A15371F2B16F000FD762F /* AnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransitioning.swift; sourceTree = "<group>"; };
 		047A15381F2B16F000FD762F /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		047A153A1F2B16F000FD762F /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		049D9CDF1F556189007AFC45 /* Detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		049D9CE11F557B9A007AFC45 /* NavigatorConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigatorConfigurable.swift; sourceTree = "<group>"; };
 		04D5D7CD1F52C56C00F85919 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		04D5D7CF1F52C69800F85919 /* SearchNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNavigationView.swift; sourceTree = "<group>"; };
 		04D5D7D11F52CA3700F85919 /* SearchDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDefaultView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 		04F9A8101F1FA04900B8ED40 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		04F9A8131F1FA3E300B8ED40 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		04F9A8151F1FA45C00B8ED40 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		04FBF1DD1F5413F2001B55FD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		04FBF1DE1F5413F2001B55FD /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		29BFC1B310A1F6D7138833DE /* Pods-Today-News-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today-News-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Today-News-iOS/Pods-Today-News-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		977FEA0A9E37DD8DC368BC55 /* Pods_Today_News_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today_News_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD16E9A939D3E19217803B66 /* Pods-Today-News-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today-News-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Today-News-iOS/Pods-Today-News-iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +239,7 @@
 		04F9A7C51F1F6C6700B8ED40 /* Src */ = {
 			isa = PBXGroup;
 			children = (
+				04FBF1D91F541137001B55FD /* Detail */,
 				04D5D7C91F52C54B00F85919 /* Search */,
 				04F9A7F21F1F8F4100B8ED40 /* Home */,
 				04F9A7F61F1F8F4100B8ED40 /* Main */,
@@ -273,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */,
+				049D9CE11F557B9A007AFC45 /* NavigatorConfigurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -462,6 +472,40 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		04FBF1D91F541137001B55FD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				04FBF1DA1F541137001B55FD /* Controller */,
+				04FBF1DB1F541137001B55FD /* Model */,
+				04FBF1DC1F541137001B55FD /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		04FBF1DA1F541137001B55FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04FBF1DD1F5413F2001B55FD /* DetailViewController.swift */,
+				04FBF1DE1F5413F2001B55FD /* DetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04FBF1DB1F541137001B55FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				049D9CDF1F556189007AFC45 /* Detail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04FBF1DC1F541137001B55FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		370191C2F744C7CB03DA4BE2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -546,6 +590,7 @@
 				04F594571F29EBD9006B8D16 /* MoreLoginViewController.xib in Resources */,
 				04F594511F29CAAF006B8D16 /* MineNoLoginHeaderView.xib in Resources */,
 				04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */,
+				04FBF1E01F5413F3001B55FD /* DetailViewController.xib in Resources */,
 				04D5D7D41F52CA7900F85919 /* SearchDefaultView.xib in Resources */,
 				04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */,
 				0468D5911F29B22200C08093 /* MineCell.xib in Resources */,
@@ -623,6 +668,7 @@
 			files = (
 				04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */,
 				04DE58E51F20880B005192B7 /* SegmentBaseViewController.swift in Sources */,
+				049D9CE01F556189007AFC45 /* Detail.swift in Sources */,
 				0468D58D1F29AB3500C08093 /* MineCellModel.swift in Sources */,
 				04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */,
 				04D5D7D71F52D54800F85919 /* CheckTool.swift in Sources */,
@@ -642,12 +688,14 @@
 				04151C0C1F28708B007D55C3 /* HomeTopicPhotosView.swift in Sources */,
 				04D5D7D21F52CA3700F85919 /* SearchDefaultView.swift in Sources */,
 				04DE5AB61F20D9A0005192B7 /* HomeContent.swift in Sources */,
+				049D9CE21F557B9A007AFC45 /* NavigatorConfigurable.swift in Sources */,
 				04F9A8141F1FA3E300B8ED40 /* DataManager.swift in Sources */,
 				04F594561F29EBD9006B8D16 /* MoreLoginViewController.swift in Sources */,
 				04DE58E31F2087B9005192B7 /* SEKView+Frame.swift in Sources */,
 				04D5D7D01F52C69800F85919 /* SearchNavigationView.swift in Sources */,
 				04DE58DB1F205F3A005192B7 /* HomeCategory.swift in Sources */,
 				04DE5AB81F20DDC2005192B7 /* HomeTopicViewCell.swift in Sources */,
+				04FBF1DF1F5413F2001B55FD /* DetailViewController.swift in Sources */,
 				04F9A80A1F1F8F9900B8ED40 /* MineViewController.swift in Sources */,
 				04F594591F2A152C006B8D16 /* UIColorExtenstion.swift in Sources */,
 				0468D5901F29B22200C08093 /* MineCell.swift in Sources */,

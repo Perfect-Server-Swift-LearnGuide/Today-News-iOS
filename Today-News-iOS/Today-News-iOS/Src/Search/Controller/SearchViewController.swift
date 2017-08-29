@@ -70,7 +70,7 @@ extension SearchViewController: SearchNavigationViewDelegate, UITextFieldDelegat
     /// 导航栏取消按钮点击
     func cancelButtonClicked(_ searchBar: UITextField) {
         searchBar.resignFirstResponder()
-        let _ = navigationController?.popViewController(animated: true)
+         _ = navigationController?.popViewController(animated: true)
     }
     
 }

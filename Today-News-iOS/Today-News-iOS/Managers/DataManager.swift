@@ -31,6 +31,9 @@ class DataManager {
         case let .Login(params):
             DataService.register(App.Uri.Login.rawValue, params: params, loadFinished: loadFinished)
             
+        case let .Detail(params):
+            DataService.detail(App.Uri.Detail.rawValue, params: params, loadFinished: loadFinished)
+            
         default:
             break
         }

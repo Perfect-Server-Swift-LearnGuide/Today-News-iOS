@@ -35,11 +35,16 @@ class MoreLoginViewController: UIViewController {
         self.loginModeButton.setTitle("免密码登录", for: .selected)
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 
 extension MoreLoginViewController {
     /// 关闭按钮点击
     @IBAction func closeLoginAction() {
+        view.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
     
@@ -49,20 +54,33 @@ extension MoreLoginViewController {
         // 检测手机号
         if !CheckTool.shaerCheck().checkPhone(phone: mobileTextField.text!) {
             SVProgressHUD.showError(withStatus: "手机号格式不正确")
+            SVProgressHUD.dismiss(withDelay: 0.5)
             return
         }
         
+        let params:[String: Any] = [
+            "phone" : mobileTextField.text!,
+            "code" : passwordTextField.text!
+        ]
         if topLabel.text == "帐号密码登录" {
-            
+            DataManager.dataFromSource(source: .Login(params: params), loadFinished: { (response) in
+                if let data = response as? [String: AnyObject], let json = data["result"] {
+                    SVProgressHUD.showInfo(withStatus: json["msg"] as! String)
+                    SVProgressHUD.dismiss(withDelay: 0.5)
+                    self.closeLoginAction()
+                    
+                    print(json)
+                }
+                
+            })
         } else {
-            let params:[String: Any] = [
-                "phone" : mobileTextField.text!,
-                "code" : passwordTextField.text!
-            ]
+
             DataManager.dataFromSource(source: .Register(params: params), loadFinished: { (response) in
                 if let data = response as? [String: AnyObject], let json = data["result"] {
-                    
                     SVProgressHUD.showInfo(withStatus: json["msg"] as! String)
+                    SVProgressHUD.dismiss(withDelay: 0.5)
+                    self.closeLoginAction()
+                    
                     print(json)
                 }
                 

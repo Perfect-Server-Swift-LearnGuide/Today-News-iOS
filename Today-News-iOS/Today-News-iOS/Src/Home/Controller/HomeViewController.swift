@@ -63,6 +63,7 @@ extension HomeViewController {
 // MARK: - StatusBarStyle
 extension HomeViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
+        
         return .lightContent
     }
 }

@@ -64,6 +64,8 @@ enum App {
         case Register(params: [String: Any])
         /// 用户登录
         case Login(params: [String: Any])
+        /// 新闻详情
+        case Detail(params: [String: Any])
     }
     
     /// 服务器基础 URi
@@ -81,6 +83,8 @@ enum App {
         case Register = "user/register"
         /// 用户-登录
         case Login = "user/login"
+        /// 新闻详情
+        case Detail = "article/detail"
         
     }
     

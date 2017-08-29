@@ -128,11 +128,18 @@ extension TopicPageViewController: UITableViewDataSource {
         }
     }
     
+    
 }
 
 //MARK: - tableView delegate
 extension TopicPageViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard let data = contents[indexPath.row] as? HomeContent else { fatalError("解析数据失败") }
+        let detail = DetailViewController()
+        detail.homeContent = data
+        detail.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(detail, animated: true)
         
     }
 }

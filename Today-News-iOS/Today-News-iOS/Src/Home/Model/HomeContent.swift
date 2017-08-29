@@ -21,4 +21,6 @@ class HomeContent: NSObject {
     var comment_count = 0
     /// 文章图片
     var thumbnails: [String] = []
+    /// 文章id
+    var article_id = ""
 }
