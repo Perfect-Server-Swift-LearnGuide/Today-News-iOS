@@ -13,6 +13,11 @@ class DetailViewController: UIViewController {
     var homeContent: HomeContent?
     
     var detail: Detail?
+    
+    lazy var commentPublish: CommentPublishView = {
+        let comment = CommentPublishView.createFromNib()
+        return comment!
+    }()
 
     
     @IBOutlet weak var webView: UIWebView!
@@ -23,10 +28,22 @@ class DetailViewController: UIViewController {
 
         setupUi()
         
+        layoutUI()
+        
         loadData()
+        
+        // 键盘通知
+        NotificationCenter.default.addObserver(self, selector: #selector(DetailViewController.keyboardChange(noti:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
 
-
+    @IBAction func editCommentAction(_ sender: UIButton) {
+        commentPublish.commentTextView.becomeFirstResponder()
+    }
+    
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 // MARK: -数据处理
@@ -53,16 +70,23 @@ extension DetailViewController {
         // 设置导航栏属性
         navigationController?.navigationBar.barStyle = .black
     }
+    
+
 }
 
 // MARK: - UI
 extension DetailViewController {
     
     func setupUi() {
-        webView.backgroundColor = UIColor.white
+        webView.backgroundColor = UIColor.clear
         webView.scrollView.backgroundColor = UIColor.white
+        webView.scrollView.keyboardDismissMode = .interactive
+        webView.isOpaque = false
+        
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.barTintColor = UIColor.white
+        
+        self.view.addSubview(commentPublish)
         
         navItem(pos: .Left, action: #selector(DetailViewController.back), img: R.image.lefterbackicon_titlebar_24x24_())
         
@@ -70,16 +94,48 @@ extension DetailViewController {
 
     }
     
+    func layoutUI() {
+        commentPublish.snp.makeConstraints { (make) in
+            make.left.right.equalTo(self.view)
+            make.height.equalTo(45)
+            make.top.equalTo(self.view.snp.bottom)
+        }
+    }
 }
 
 extension DetailViewController: NavigatorConfigurable {}
 
 // MARK: - Event
 extension DetailViewController {
+    
     func back() {
         _ = navigationController?.popViewController(animated: true)
     }
+    
     func more() {
+        
+    }
+    
+    func keyboardChange(noti: NSNotification) {
+        let userInfo = noti.userInfo
+        let duration = userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? Double
+        let keyboardF = userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue
+
+        // 执行动画
+        UIView.animate(withDuration: duration!, animations: {
+            if keyboardF!.cgRectValue.minY >= self.view.height {
+                // 键盘消失
+                self.commentPublish.snp.updateConstraints({ (make) in
+                    make.top.equalTo(self.view.snp.bottom)
+                })
+            } else {
+                self.commentPublish.snp.updateConstraints({ (make) in
+                    make.top.equalTo(self.view.snp.bottom).offset(-(45.0 + keyboardF!.cgRectValue.height))
+                })
+            }
+        })
+        
+        self.view.layoutIfNeeded()
         
     }
 }

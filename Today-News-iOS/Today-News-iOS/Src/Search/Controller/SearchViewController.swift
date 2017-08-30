@@ -30,9 +30,9 @@ class SearchViewController: UIViewController {
     
     // 搜索界面默认的背景
     fileprivate lazy var searchDefaultView: SearchDefaultView = {
-        let searchDefaultView = SearchDefaultView.searchDefaultView()
-        searchDefaultView.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 180)
-        return searchDefaultView
+        let searchDefaultView = SearchDefaultView.createFromNib()
+        searchDefaultView?.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.size.width, height: 180)
+        return searchDefaultView!
     }()
     
 

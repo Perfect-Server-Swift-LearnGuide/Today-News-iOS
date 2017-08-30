@@ -28,7 +28,7 @@
                     </connections>
                 </webView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-SK-1AF" userLabel="底部">
-                    <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                    <rect key="frame" x="0.0" y="622" width="375" height="45"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cM1-RA-AXt" userLabel="line">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
@@ -38,20 +38,23 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsA-m0-QGN" userLabel="左边">
-                            <rect key="frame" x="0.0" y="0.0" width="225" height="46"/>
+                            <rect key="frame" x="0.0" y="0.0" width="225" height="45"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-8z-aWj">
-                                    <rect key="frame" x="12" y="7" width="201" height="32"/>
+                                    <rect key="frame" x="14" y="7" width="199" height="31"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isP-wG-3qE">
-                                            <rect key="frame" x="10" y="0.0" width="87" height="32"/>
+                                            <rect key="frame" x="10" y="0.0" width="87" height="31"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" title=" 写评论..." image="write_new_24x24_">
                                                 <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sP-HM-knO">
-                                            <rect key="frame" x="0.0" y="0.0" width="201" height="32"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="199" height="31"/>
+                                            <connections>
+                                                <action selector="editCommentAction:" destination="-1" eventType="touchUpInside" id="wHW-fU-rJq"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.96078431372549022" green="0.96470588235294119" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,23 +79,23 @@
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="ThS-8z-aWj" secondAttribute="trailing" constant="12" id="e6z-73-So5"/>
                                 <constraint firstAttribute="bottom" secondItem="ThS-8z-aWj" secondAttribute="bottom" constant="7" id="mH5-Nl-qTZ"/>
-                                <constraint firstItem="ThS-8z-aWj" firstAttribute="leading" secondItem="qsA-m0-QGN" secondAttribute="leading" constant="12" id="ul8-MJ-EPy"/>
+                                <constraint firstItem="ThS-8z-aWj" firstAttribute="leading" secondItem="qsA-m0-QGN" secondAttribute="leading" constant="14" id="ul8-MJ-EPy"/>
                                 <constraint firstItem="ThS-8z-aWj" firstAttribute="top" secondItem="qsA-m0-QGN" secondAttribute="top" constant="7" id="x1d-29-gwa"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vE5-ud-yl9" userLabel="右边">
-                            <rect key="frame" x="225" y="0.0" width="150" height="46"/>
+                            <rect key="frame" x="225" y="0.0" width="150" height="45"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edg-wt-cSn" userLabel="评论">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="46"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="45"/>
                                     <state key="normal" image="icon_details_comment_black_24x24_"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slA-OR-TNg" userLabel="收藏">
-                                    <rect key="frame" x="50" y="0.0" width="50" height="46"/>
+                                    <rect key="frame" x="50" y="0.0" width="50" height="45"/>
                                     <state key="normal" image="icon_details_collect_black_24x24_"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDQ-DO-hae" userLabel="转发">
-                                    <rect key="frame" x="100" y="0.0" width="50" height="46"/>
+                                    <rect key="frame" x="100" y="0.0" width="50" height="45"/>
                                     <state key="normal" image="icon_details_share_black_24x24_"/>
                                 </button>
                             </subviews>
@@ -121,7 +124,7 @@
                         <constraint firstItem="vE5-ud-yl9" firstAttribute="top" secondItem="oPx-SK-1AF" secondAttribute="top" id="UKG-Ji-L0s"/>
                         <constraint firstAttribute="trailing" secondItem="cM1-RA-AXt" secondAttribute="trailing" id="VC1-Qw-76s"/>
                         <constraint firstItem="qsA-m0-QGN" firstAttribute="leading" secondItem="oPx-SK-1AF" secondAttribute="leading" id="cEu-ZV-EKH"/>
-                        <constraint firstAttribute="height" constant="46" id="ced-ID-Slq"/>
+                        <constraint firstAttribute="height" constant="45" id="ced-ID-Slq"/>
                         <constraint firstItem="qsA-m0-QGN" firstAttribute="top" secondItem="oPx-SK-1AF" secondAttribute="top" id="job-De-BVh"/>
                         <constraint firstItem="vE5-ud-yl9" firstAttribute="leading" secondItem="qsA-m0-QGN" secondAttribute="trailing" id="mvG-UX-5RZ"/>
                         <constraint firstAttribute="bottom" secondItem="vE5-ud-yl9" secondAttribute="bottom" id="rAU-ho-07P"/>

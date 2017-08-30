@@ -11,6 +11,9 @@ import SVProgressHUD
 
 class MoreLoginViewController: UIViewController {
 
+    /// 用户
+    var user: User?
+    
     /// 顶部标题
     @IBOutlet weak var topLabel: UILabel!
     /// 发送验证码 View
@@ -58,30 +61,42 @@ extension MoreLoginViewController {
             return
         }
         
-        let params:[String: Any] = [
-            "phone" : mobileTextField.text!,
-            "code" : passwordTextField.text!
-        ]
+
         if topLabel.text == "帐号密码登录" {
+            let params:[String: Any] = [
+                "phone" : mobileTextField.text!,
+                "pwd" : passwordTextField.text!
+            ]
             DataManager.dataFromSource(source: .Login(params: params), loadFinished: { (response) in
-                if let data = response as? [String: AnyObject], let json = data["result"] {
+                if let res = response as? [String: AnyObject], let data = res["data"] as? [String: Any], let json = res["result"], let status = json["status"] as? Int {
                     SVProgressHUD.showInfo(withStatus: json["msg"] as! String)
                     SVProgressHUD.dismiss(withDelay: 0.5)
-                    self.closeLoginAction()
+
+                    if status == 0 {
+                        self.user = User.mj_object(withKeyValues: data)
+                        self.closeLoginAction()
+                    }
                     
-                    print(json)
+                    print(data)
                 }
                 
             })
         } else {
-
+            let params:[String: Any] = [
+                "phone" : mobileTextField.text!,
+                "code" : passwordTextField.text!
+            ]
             DataManager.dataFromSource(source: .Register(params: params), loadFinished: { (response) in
-                if let data = response as? [String: AnyObject], let json = data["result"] {
+                if let res = response as? [String: AnyObject], let data = res["data"], let json = res["result"], let status = json["status"] as? Int {
                     SVProgressHUD.showInfo(withStatus: json["msg"] as! String)
                     SVProgressHUD.dismiss(withDelay: 0.5)
-                    self.closeLoginAction()
                     
-                    print(json)
+                    if status == 0 {
+                        self.user = User.mj_object(withKeyValues: data)
+                        self.closeLoginAction()
+                    }
+                    
+                    print(data)
                 }
                 
             })

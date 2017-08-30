@@ -8,15 +8,12 @@
 
 import UIKit
 
-class SearchDefaultView: UIView {
+class SearchDefaultView: UIView, NibCreatable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    class func searchDefaultView() -> SearchDefaultView {
-        return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)?.last as! SearchDefaultView
-    }
     
 }

@@ -10,6 +10,11 @@
 		04151C0C1F28708B007D55C3 /* HomeTopicPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04151C0B1F28708B007D55C3 /* HomeTopicPhotosView.swift */; };
 		04151C0E1F28E448007D55C3 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04151C0D1F28E448007D55C3 /* MineViewController.xib */; };
 		042840521F566F4900347215 /* UIColorExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042840511F566F4900347215 /* UIColorExtenstion.swift */; };
+		042840541F5673B900347215 /* CommentPublishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042840531F5673B900347215 /* CommentPublishView.swift */; };
+		042840561F5673C400347215 /* CommentPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042840551F5673C400347215 /* CommentPublishView.xib */; };
+		042840581F5674CE00347215 /* NibCreatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042840571F5674CE00347215 /* NibCreatable.swift */; };
+		0428405A1F568C3B00347215 /* SMKTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042840591F568C3B00347215 /* SMKTextView.swift */; };
+		0428405C1F56A33B00347215 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428405B1F56A33B00347215 /* User.swift */; };
 		0468D58D1F29AB3500C08093 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468D58C1F29AB3500C08093 /* MineCellModel.swift */; };
 		0468D5901F29B22200C08093 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468D58E1F29B22200C08093 /* MineCell.swift */; };
 		0468D5911F29B22200C08093 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0468D58F1F29B22200C08093 /* MineCell.xib */; };
@@ -61,6 +66,11 @@
 		04151C0B1F28708B007D55C3 /* HomeTopicPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicPhotosView.swift; sourceTree = "<group>"; };
 		04151C0D1F28E448007D55C3 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
 		042840511F566F4900347215 /* UIColorExtenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtenstion.swift; sourceTree = "<group>"; };
+		042840531F5673B900347215 /* CommentPublishView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentPublishView.swift; sourceTree = "<group>"; };
+		042840551F5673C400347215 /* CommentPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentPublishView.xib; sourceTree = "<group>"; };
+		042840571F5674CE00347215 /* NibCreatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibCreatable.swift; sourceTree = "<group>"; };
+		042840591F568C3B00347215 /* SMKTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKTextView.swift; sourceTree = "<group>"; };
+		0428405B1F56A33B00347215 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04496AFE1F1EF2D80025190A /* Today-News-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Today-News-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0468D58C1F29AB3500C08093 /* MineCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		0468D58E1F29B22200C08093 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
@@ -222,6 +232,7 @@
 		04DE58DE1F208608005192B7 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				042840591F568C3B00347215 /* SMKTextView.swift */,
 				047A15361F2B16F000FD762F /* SMKTransition */,
 				04DE58DF1F2087B9005192B7 /* SEKNavigationView */,
 			);
@@ -286,6 +297,7 @@
 			children = (
 				04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */,
 				049D9CE11F557B9A007AFC45 /* NavigatorConfigurable.swift */,
+				042840571F5674CE00347215 /* NibCreatable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -418,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				0468D58C1F29AB3500C08093 /* MineCellModel.swift */,
+				0428405B1F56A33B00347215 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -505,6 +518,8 @@
 		04FBF1DC1F541137001B55FD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				042840531F5673B900347215 /* CommentPublishView.swift */,
+				042840551F5673C400347215 /* CommentPublishView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -595,6 +610,7 @@
 				04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */,
 				04FBF1E01F5413F3001B55FD /* DetailViewController.xib in Resources */,
 				04D5D7D41F52CA7900F85919 /* SearchDefaultView.xib in Resources */,
+				042840561F5673C400347215 /* CommentPublishView.xib in Resources */,
 				04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */,
 				0468D5911F29B22200C08093 /* MineCell.xib in Resources */,
 				04151C0E1F28E448007D55C3 /* MineViewController.xib in Resources */,
@@ -672,12 +688,14 @@
 				04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */,
 				04DE58E51F20880B005192B7 /* SegmentBaseViewController.swift in Sources */,
 				049D9CE01F556189007AFC45 /* Detail.swift in Sources */,
+				042840541F5673B900347215 /* CommentPublishView.swift in Sources */,
 				0468D58D1F29AB3500C08093 /* MineCellModel.swift in Sources */,
 				04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */,
 				04D5D7D71F52D54800F85919 /* CheckTool.swift in Sources */,
 				04F9A80F1F1F97AC00B8ED40 /* R.generated.swift in Sources */,
 				04F9A8041F1F8F4100B8ED40 /* MainViewController.swift in Sources */,
 				047A153B1F2B16F000FD762F /* AnimatedTransitioning.swift in Sources */,
+				0428405A1F568C3B00347215 /* SMKTextView.swift in Sources */,
 				04D5D7CE1F52C56C00F85919 /* SearchViewController.swift in Sources */,
 				042840521F566F4900347215 /* UIColorExtenstion.swift in Sources */,
 				04F9A8111F1FA04900B8ED40 /* AppConstants.swift in Sources */,
@@ -687,6 +705,7 @@
 				04F5944F1F29CA98006B8D16 /* MineNoLoginHeaderView.swift in Sources */,
 				04F594531F29CC5F006B8D16 /* MineHeaderButton.swift in Sources */,
 				04F9A8061F1F8F5500B8ED40 /* HomeViewController.swift in Sources */,
+				0428405C1F56A33B00347215 /* User.swift in Sources */,
 				04DE58ED1F20A34B005192B7 /* HomeSearchBar.swift in Sources */,
 				04DE5ABA1F20E0E7005192B7 /* ViewConfigurable.swift in Sources */,
 				04151C0C1F28708B007D55C3 /* HomeTopicPhotosView.swift in Sources */,
@@ -701,6 +720,7 @@
 				04DE5AB81F20DDC2005192B7 /* HomeTopicViewCell.swift in Sources */,
 				04FBF1DF1F5413F2001B55FD /* DetailViewController.swift in Sources */,
 				04F9A80A1F1F8F9900B8ED40 /* MineViewController.swift in Sources */,
+				042840581F5674CE00347215 /* NibCreatable.swift in Sources */,
 				04F594591F2A152C006B8D16 /* CALayerExtenstion.swift in Sources */,
 				0468D5901F29B22200C08093 /* MineCell.swift in Sources */,
 				04DE58EB1F20A2D4005192B7 /* HomeNavBarView.swift in Sources */,
