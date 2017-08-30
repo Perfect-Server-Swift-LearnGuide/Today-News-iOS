@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04151C0C1F28708B007D55C3 /* HomeTopicPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04151C0B1F28708B007D55C3 /* HomeTopicPhotosView.swift */; };
 		04151C0E1F28E448007D55C3 /* MineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04151C0D1F28E448007D55C3 /* MineViewController.xib */; };
+		042840521F566F4900347215 /* UIColorExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042840511F566F4900347215 /* UIColorExtenstion.swift */; };
 		0468D58D1F29AB3500C08093 /* MineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468D58C1F29AB3500C08093 /* MineCellModel.swift */; };
 		0468D5901F29B22200C08093 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468D58E1F29B22200C08093 /* MineCell.swift */; };
 		0468D5911F29B22200C08093 /* MineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0468D58F1F29B22200C08093 /* MineCell.xib */; };
@@ -38,7 +39,7 @@
 		04F594531F29CC5F006B8D16 /* MineHeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F594521F29CC5F006B8D16 /* MineHeaderButton.swift */; };
 		04F594561F29EBD9006B8D16 /* MoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F594541F29EBD9006B8D16 /* MoreLoginViewController.swift */; };
 		04F594571F29EBD9006B8D16 /* MoreLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F594551F29EBD9006B8D16 /* MoreLoginViewController.xib */; };
-		04F594591F2A152C006B8D16 /* UIColorExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F594581F2A152C006B8D16 /* UIColorExtenstion.swift */; };
+		04F594591F2A152C006B8D16 /* CALayerExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F594581F2A152C006B8D16 /* CALayerExtenstion.swift */; };
 		04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9A7CA1F1F6F4500B8ED40 /* Assets.xcassets */; };
 		04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9A7D61F1F729000B8ED40 /* AppDelegate.swift */; };
 		04F9A7D91F1F729000B8ED40 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F9A7D71F1F729000B8ED40 /* Info.plist */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		04151C0B1F28708B007D55C3 /* HomeTopicPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicPhotosView.swift; sourceTree = "<group>"; };
 		04151C0D1F28E448007D55C3 /* MineViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineViewController.xib; sourceTree = "<group>"; };
+		042840511F566F4900347215 /* UIColorExtenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtenstion.swift; sourceTree = "<group>"; };
 		04496AFE1F1EF2D80025190A /* Today-News-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Today-News-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0468D58C1F29AB3500C08093 /* MineCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCellModel.swift; sourceTree = "<group>"; };
 		0468D58E1F29B22200C08093 /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		04F594521F29CC5F006B8D16 /* MineHeaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineHeaderButton.swift; sourceTree = "<group>"; };
 		04F594541F29EBD9006B8D16 /* MoreLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreLoginViewController.swift; sourceTree = "<group>"; };
 		04F594551F29EBD9006B8D16 /* MoreLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreLoginViewController.xib; sourceTree = "<group>"; };
-		04F594581F2A152C006B8D16 /* UIColorExtenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtenstion.swift; sourceTree = "<group>"; };
+		04F594581F2A152C006B8D16 /* CALayerExtenstion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerExtenstion.swift; sourceTree = "<group>"; };
 		04F9A7CA1F1F6F4500B8ED40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04F9A7D61F1F729000B8ED40 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04F9A7D71F1F729000B8ED40 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -273,7 +275,8 @@
 		04F9A7DA1F1F829700B8ED40 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				04F594581F2A152C006B8D16 /* UIColorExtenstion.swift */,
+				04F594581F2A152C006B8D16 /* CALayerExtenstion.swift */,
+				042840511F566F4900347215 /* UIColorExtenstion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				04F9A8041F1F8F4100B8ED40 /* MainViewController.swift in Sources */,
 				047A153B1F2B16F000FD762F /* AnimatedTransitioning.swift in Sources */,
 				04D5D7CE1F52C56C00F85919 /* SearchViewController.swift in Sources */,
+				042840521F566F4900347215 /* UIColorExtenstion.swift in Sources */,
 				04F9A8111F1FA04900B8ED40 /* AppConstants.swift in Sources */,
 				04F9A80C1F1F8FA300B8ED40 /* VideoViewController.swift in Sources */,
 				047A153E1F2B16F000FD762F /* Transition.swift in Sources */,
@@ -697,7 +701,7 @@
 				04DE5AB81F20DDC2005192B7 /* HomeTopicViewCell.swift in Sources */,
 				04FBF1DF1F5413F2001B55FD /* DetailViewController.swift in Sources */,
 				04F9A80A1F1F8F9900B8ED40 /* MineViewController.swift in Sources */,
-				04F594591F2A152C006B8D16 /* UIColorExtenstion.swift in Sources */,
+				04F594591F2A152C006B8D16 /* CALayerExtenstion.swift in Sources */,
 				0468D5901F29B22200C08093 /* MineCell.swift in Sources */,
 				04DE58EB1F20A2D4005192B7 /* HomeNavBarView.swift in Sources */,
 				04DE58E81F2095D5005192B7 /* TopicPageViewController.swift in Sources */,

@@ -59,12 +59,14 @@ extension DetailViewController {
 extension DetailViewController {
     
     func setupUi() {
+        webView.backgroundColor = UIColor.white
+        webView.scrollView.backgroundColor = UIColor.white
         navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.barTintColor = UIColor.white
         
         navItem(pos: .Left, action: #selector(DetailViewController.back), img: R.image.lefterbackicon_titlebar_24x24_())
         
-        navItem(pos: .Right, action: #selector(DetailViewController.more), img: R.image.more_x22())
+        navItem(pos: .Right, action: #selector(DetailViewController.more), img: R.image.more_popver_black_24x24())
 
     }
     

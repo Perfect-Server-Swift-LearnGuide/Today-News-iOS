@@ -47,7 +47,7 @@
                                             <rect key="frame" x="10" y="0.0" width="87" height="32"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <state key="normal" title=" 写评论..." image="write_new_24x24_">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sP-HM-knO">
@@ -85,15 +85,15 @@
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edg-wt-cSn" userLabel="评论">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="46"/>
-                                    <state key="normal" image="icon_details_comment_24x24_"/>
+                                    <state key="normal" image="icon_details_comment_black_24x24_"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slA-OR-TNg" userLabel="收藏">
                                     <rect key="frame" x="50" y="0.0" width="50" height="46"/>
-                                    <state key="normal" image="icon_details_collect_24x24_"/>
+                                    <state key="normal" image="icon_details_collect_black_24x24_"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDQ-DO-hae" userLabel="转发">
                                     <rect key="frame" x="100" y="0.0" width="50" height="46"/>
-                                    <state key="normal" image="icon_details_share_24x24_"/>
+                                    <state key="normal" image="icon_details_share_black_24x24_"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -144,9 +144,9 @@
         </view>
     </objects>
     <resources>
-        <image name="icon_details_collect_24x24_" width="24" height="24"/>
-        <image name="icon_details_comment_24x24_" width="24" height="24"/>
-        <image name="icon_details_share_24x24_" width="24" height="24"/>
+        <image name="icon_details_collect_black_24x24_" width="24" height="24"/>
+        <image name="icon_details_comment_black_24x24_" width="24" height="24"/>
+        <image name="icon_details_share_black_24x24_" width="24" height="24"/>
         <image name="write_new_24x24_" width="24" height="24"/>
     </resources>
 </document>
