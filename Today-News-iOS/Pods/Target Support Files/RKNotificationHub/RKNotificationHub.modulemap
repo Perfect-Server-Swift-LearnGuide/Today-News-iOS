@@ -1,0 +1,6 @@
+framework module RKNotificationHub {
+  umbrella header "RKNotificationHub-umbrella.h"
+
+  export *
+  module * { export * }
+}
