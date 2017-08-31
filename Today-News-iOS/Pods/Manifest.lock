@@ -1,0 +1,59 @@
+PODS:
+  - Alamofire (4.5.0)
+  - DZNEmptyDataSet (1.8.1)
+  - IQKeyboardManagerSwift (4.0.10)
+  - Kingfisher (3.10.3)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.1.12)
+  - R.swift (3.3.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
+  - RKNotificationHub (2.0.4)
+  - SnapKit (3.2.0)
+  - SVProgressHUD (2.1.2)
+  - SwiftHEXColors (1.1.0)
+  - SwiftNotificationCenter (1.0.2)
+  - UITableView+FDTemplateLayoutCell (1.6)
+
+DEPENDENCIES:
+  - Alamofire
+  - DZNEmptyDataSet
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - MJExtension
+  - MJRefresh
+  - R.swift
+  - RealmSwift
+  - RKNotificationHub
+  - SnapKit
+  - SVProgressHUD
+  - SwiftHEXColors
+  - SwiftNotificationCenter
+  - UITableView+FDTemplateLayoutCell
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
+  Kingfisher: a0ac82dc5bcf0388dd74b294cf2cc13730c63436
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  R.swift: bde9704d50ff36820f49e266bc88ef545e1e9b36
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
+  RKNotificationHub: 3765424499139c3d3885b681bb0837f072d12ae6
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  SwiftHEXColors: 8f7e364df7929e32cff9f9eeb044bb215167d6be
+  SwiftNotificationCenter: d108168dcbb6b804804cc22d5848733c3ca7ff5b
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+
+PODFILE CHECKSUM: 102d9cfa76eb4abbfa36dc9481a403c9a5256955
+
+COCOAPODS: 1.2.0
