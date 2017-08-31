@@ -12,18 +12,31 @@ class MineViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    // 头部视图
+    var user = User()
+    
+    // 未登录
     fileprivate lazy var noLoginHeaderView: MineNoLoginHeaderView = {
-        let noLoginHeaderView = MineNoLoginHeaderView.headerView()
-        noLoginHeaderView.delegate = self
-        return noLoginHeaderView
+        let noLoginHeaderView = MineNoLoginHeaderView.createFromNib()
+        noLoginHeaderView?.delegate = self
+        return noLoginHeaderView!
     }()
+    
+    // 已登录
+    fileprivate lazy var loginHeaderView: MineLoginHeaderView = {
+        let loginHeaderView = MineLoginHeaderView.createFromNib()
+        return loginHeaderView!
+    }()
+    
     
     lazy var datas: NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let u = User.realm.objects(User.self).first {
+            self.user = u
+        }
+    
         setupUI()
         
         setupTableView()
@@ -34,7 +47,7 @@ class MineViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
          super.viewDidLayoutSubviews()
-        noLoginHeaderView.height = UIScreen.main.bounds.height * 0.4
+        tableView.tableHeaderView?.height = 163
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +85,7 @@ extension MineViewController {
     }
 }
 
-// MARK: - setup TableView
+// MARK: - setup ui
 extension MineViewController {
     
     func setupUI() {
@@ -82,7 +95,9 @@ extension MineViewController {
     
     func setupTableView() {
         tableView.register(UINib(nibName: String(describing: MineCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MineCell.self))
-        tableView.tableHeaderView = noLoginHeaderView
+        tableView.register(UINib(nibName: String(describing: MineActionCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MineActionCell.self))
+        
+        tableView.tableHeaderView = self.user.user_id.characters.count > 0 ? loginHeaderView : noLoginHeaderView
         tableView.separatorColor = App.Color.MainTableSepGray.color
         tableView.tableFooterView = UIView()
     }
@@ -92,11 +107,12 @@ extension MineViewController {
 extension MineViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return datas.count
+        return datas.count + 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let rows = datas[section] as? [MineCellModel] else {
+        if section == 0 {return 1}
+        guard let rows = datas[section - 1] as? [MineCellModel] else {
             return 0
         }
         return rows.count
@@ -104,7 +120,13 @@ extension MineViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let rows = datas[indexPath.section] as? [AnyObject], let data = rows[indexPath.row] as? MineCellModel,  let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MineCell.self), for: indexPath) as? ViewConfigurable else { fatalError("无法构建 Cell") }
+        if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MineActionCell.self), for: indexPath) as? ViewConfigurable else { fatalError("无法构建 Cell") }
+            
+            return cell as? UITableViewCell ?? UITableViewCell()
+        }
+        
+        guard let rows = datas[indexPath.section - 1] as? [AnyObject], let data = rows[indexPath.row] as? MineCellModel,  let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MineCell.self), for: indexPath) as? ViewConfigurable else { fatalError("无法构建 Cell") }
         
         cell.viewSourceWithModel!(data , indexPath: indexPath as IndexPath)
         
@@ -112,6 +134,9 @@ extension MineViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 60
+        }
         return 40
     }
     
@@ -124,6 +149,9 @@ extension MineViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 0.1
+        }
         return 10
     }
     
@@ -140,11 +168,12 @@ extension MineViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y;
         if offsetY < 0 {
-            let headerviewHeight = UIScreen.main.bounds.height * 0.38
+            let headerviewHeight: CGFloat = 163.0
             let screenWidth = UIScreen.main.bounds.width
             let totalOffset = headerviewHeight + abs(offsetY)
             let f = totalOffset / headerviewHeight
-            noLoginHeaderView.bgImageView.frame = CGRect(x: -screenWidth * (f - 1) * 0.5, y: offsetY, width: screenWidth * f, height: totalOffset)
+            let rect = CGRect(x: -screenWidth * (f - 1) * 0.5, y: offsetY, width: screenWidth * f, height: totalOffset)
+            user.user_id.characters.count > 0 ? (loginHeaderView.bgImageView.frame = rect) : (noLoginHeaderView.bgImageView.frame = rect)
         }
     }
 }

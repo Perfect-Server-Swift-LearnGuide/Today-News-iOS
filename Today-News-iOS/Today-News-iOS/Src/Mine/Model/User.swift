@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import RealmSwift
 
-class User: NSObject {
+class User: Object, RealmActionable {
     
     /// 用户注册时间
-    var createtime = ""//"2017/08/28 07:48:29";
+    dynamic var createtime = ""//"2017/08/28 07:48:29";
     
     /// 手机号
-    var phone = ""
+    dynamic var phone = ""
     
     /// 用户id
-    var user_id = "" 
+    dynamic var user_id = ""
     
 }

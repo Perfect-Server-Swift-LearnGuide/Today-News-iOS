@@ -8,7 +8,26 @@
 
 import UIKit
 import SwiftHEXColors
+import RealmSwift
 
+/// Realm 数据库
+var realm: Realm! = {
+    do {
+        var config = Realm.Configuration()
+        config.deleteRealmIfMigrationNeeded = true
+        Realm.Configuration.defaultConfiguration = config
+        
+        return try Realm()
+    } catch (let error as NSError) {
+        "架构迁移失败，请删除本App后重新安装".show(WithType: .Error)
+        UIView.animate(withDuration: 0.5, delay: 1, options: [.curveEaseOut], animations: {
+            UIApplication.shared.keyWindow?.bounds = CGRect()
+        }, completion: { finished in
+            exit(0)
+        })
+        return nil
+    }
+}()
 
 enum App {
     

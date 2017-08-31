@@ -11,6 +11,9 @@ target 'Today-News-iOS' do
 
   # MJExtension - JSON 转 Model
   pod 'MJExtension'
+  
+  # Realm - 本地数据库（Swift）
+  pod 'RealmSwift'
 
   ## 辅助库
 

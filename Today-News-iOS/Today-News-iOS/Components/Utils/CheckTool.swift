@@ -12,8 +12,10 @@ class CheckTool {
     
     static let check = CheckTool()
     
-    class func shaerCheck() -> CheckTool {
-        return check
+    open class var share: CheckTool  {
+        get {
+            return check
+        }
     }
     
     func checkPhone(phone: String) -> Bool {

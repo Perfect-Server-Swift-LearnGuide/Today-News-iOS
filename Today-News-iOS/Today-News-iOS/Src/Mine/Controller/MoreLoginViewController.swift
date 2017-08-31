@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import RealmSwift
 
 class MoreLoginViewController: UIViewController {
 
@@ -55,7 +56,7 @@ extension MoreLoginViewController {
     @IBAction func loginAction() {
         
         // 检测手机号
-        if !CheckTool.shaerCheck().checkPhone(phone: mobileTextField.text!) {
+        if !CheckTool.share.checkPhone(phone: mobileTextField.text!) {
             SVProgressHUD.showError(withStatus: "手机号格式不正确")
             SVProgressHUD.dismiss(withDelay: 0.5)
             return
@@ -74,6 +75,7 @@ extension MoreLoginViewController {
 
                     if status == 0 {
                         self.user = User.mj_object(withKeyValues: data)
+                        self.user?.write()
                         self.closeLoginAction()
                     }
                     
@@ -93,6 +95,7 @@ extension MoreLoginViewController {
                     
                     if status == 0 {
                         self.user = User.mj_object(withKeyValues: data)
+                        self.user?.write()
                         self.closeLoginAction()
                     }
                     

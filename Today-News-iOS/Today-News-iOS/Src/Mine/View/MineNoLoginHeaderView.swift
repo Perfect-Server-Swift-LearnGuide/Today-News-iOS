@@ -15,7 +15,7 @@ protocol NoLoginHeaderViewDelegate: class {
     
 }
 
-class MineNoLoginHeaderView: UIView {
+class MineNoLoginHeaderView: UIView, NibCreatable {
 
     weak var delegate: NoLoginHeaderViewDelegate?
     
@@ -24,12 +24,6 @@ class MineNoLoginHeaderView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-    }
-    
-    class func headerView() -> MineNoLoginHeaderView {
-        let headerView = Bundle.main.loadNibNamed(String(describing: self), owner: nil
-            , options: nil)?.first as! MineNoLoginHeaderView
-        return headerView 
     }
 
     /// 更多登录方式按钮点击

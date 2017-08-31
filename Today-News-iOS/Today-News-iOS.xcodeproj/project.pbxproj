@@ -39,6 +39,12 @@
 		04DE5AB61F20D9A0005192B7 /* HomeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE5AB51F20D9A0005192B7 /* HomeContent.swift */; };
 		04DE5AB81F20DDC2005192B7 /* HomeTopicViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE5AB71F20DDC2005192B7 /* HomeTopicViewCell.swift */; };
 		04DE5ABA1F20E0E7005192B7 /* ViewConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */; };
+		04EA11C41F57C7B600617972 /* MineLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA11C31F57C7B600617972 /* MineLoginHeaderView.swift */; };
+		04EA11C61F57C7C300617972 /* MineLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EA11C51F57C7C300617972 /* MineLoginHeaderView.xib */; };
+		04EA11C91F57DC0900617972 /* MineActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA11C71F57DC0900617972 /* MineActionCell.swift */; };
+		04EA11CA1F57DC0900617972 /* MineActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EA11C81F57DC0900617972 /* MineActionCell.xib */; };
+		04EA11CC1F57FB9700617972 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA11CB1F57FB9700617972 /* HUD.swift */; };
+		04EA11CE1F58136F00617972 /* RealmActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EA11CD1F58136F00617972 /* RealmActionable.swift */; };
 		04F5944F1F29CA98006B8D16 /* MineNoLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F5944E1F29CA98006B8D16 /* MineNoLoginHeaderView.swift */; };
 		04F594511F29CAAF006B8D16 /* MineNoLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F594501F29CAAF006B8D16 /* MineNoLoginHeaderView.xib */; };
 		04F594531F29CC5F006B8D16 /* MineHeaderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F594521F29CC5F006B8D16 /* MineHeaderButton.swift */; };
@@ -97,6 +103,12 @@
 		04DE5AB51F20D9A0005192B7 /* HomeContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeContent.swift; sourceTree = "<group>"; };
 		04DE5AB71F20DDC2005192B7 /* HomeTopicViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTopicViewCell.swift; sourceTree = "<group>"; };
 		04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewConfigurable.swift; sourceTree = "<group>"; };
+		04EA11C31F57C7B600617972 /* MineLoginHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineLoginHeaderView.swift; sourceTree = "<group>"; };
+		04EA11C51F57C7C300617972 /* MineLoginHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineLoginHeaderView.xib; sourceTree = "<group>"; };
+		04EA11C71F57DC0900617972 /* MineActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineActionCell.swift; sourceTree = "<group>"; };
+		04EA11C81F57DC0900617972 /* MineActionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineActionCell.xib; sourceTree = "<group>"; };
+		04EA11CB1F57FB9700617972 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		04EA11CD1F58136F00617972 /* RealmActionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmActionable.swift; sourceTree = "<group>"; };
 		04F5944E1F29CA98006B8D16 /* MineNoLoginHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineNoLoginHeaderView.swift; sourceTree = "<group>"; };
 		04F594501F29CAAF006B8D16 /* MineNoLoginHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineNoLoginHeaderView.xib; sourceTree = "<group>"; };
 		04F594521F29CC5F006B8D16 /* MineHeaderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineHeaderButton.swift; sourceTree = "<group>"; };
@@ -288,6 +300,7 @@
 			children = (
 				04F594581F2A152C006B8D16 /* CALayerExtenstion.swift */,
 				042840511F566F4900347215 /* UIColorExtenstion.swift */,
+				04EA11CB1F57FB9700617972 /* HUD.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +311,7 @@
 				04DE5AB91F20E0E7005192B7 /* ViewConfigurable.swift */,
 				049D9CE11F557B9A007AFC45 /* NavigatorConfigurable.swift */,
 				042840571F5674CE00347215 /* NibCreatable.swift */,
+				04EA11CD1F58136F00617972 /* RealmActionable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -443,6 +457,10 @@
 				04F5944E1F29CA98006B8D16 /* MineNoLoginHeaderView.swift */,
 				04F594501F29CAAF006B8D16 /* MineNoLoginHeaderView.xib */,
 				04F594521F29CC5F006B8D16 /* MineHeaderButton.swift */,
+				04EA11C31F57C7B600617972 /* MineLoginHeaderView.swift */,
+				04EA11C51F57C7C300617972 /* MineLoginHeaderView.xib */,
+				04EA11C71F57DC0900617972 /* MineActionCell.swift */,
+				04EA11C81F57DC0900617972 /* MineActionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -610,6 +628,8 @@
 				04DE58E91F2095D5005192B7 /* TopicPageViewController.xib in Resources */,
 				04FBF1E01F5413F3001B55FD /* DetailViewController.xib in Resources */,
 				04D5D7D41F52CA7900F85919 /* SearchDefaultView.xib in Resources */,
+				04EA11CA1F57DC0900617972 /* MineActionCell.xib in Resources */,
+				04EA11C61F57C7C300617972 /* MineLoginHeaderView.xib in Resources */,
 				042840561F5673C400347215 /* CommentPublishView.xib in Resources */,
 				04F9A7D01F1F6F4500B8ED40 /* Assets.xcassets in Resources */,
 				0468D5911F29B22200C08093 /* MineCell.xib in Resources */,
@@ -687,8 +707,11 @@
 			files = (
 				04DE58E21F2087B9005192B7 /* SEKNavigationView.swift in Sources */,
 				04DE58E51F20880B005192B7 /* SegmentBaseViewController.swift in Sources */,
+				04EA11C91F57DC0900617972 /* MineActionCell.swift in Sources */,
 				049D9CE01F556189007AFC45 /* Detail.swift in Sources */,
 				042840541F5673B900347215 /* CommentPublishView.swift in Sources */,
+				04EA11C41F57C7B600617972 /* MineLoginHeaderView.swift in Sources */,
+				04EA11CC1F57FB9700617972 /* HUD.swift in Sources */,
 				0468D58D1F29AB3500C08093 /* MineCellModel.swift in Sources */,
 				04F9A7D81F1F729000B8ED40 /* AppDelegate.swift in Sources */,
 				04D5D7D71F52D54800F85919 /* CheckTool.swift in Sources */,
@@ -721,6 +744,7 @@
 				04FBF1DF1F5413F2001B55FD /* DetailViewController.swift in Sources */,
 				04F9A80A1F1F8F9900B8ED40 /* MineViewController.swift in Sources */,
 				042840581F5674CE00347215 /* NibCreatable.swift in Sources */,
+				04EA11CE1F58136F00617972 /* RealmActionable.swift in Sources */,
 				04F594591F2A152C006B8D16 /* CALayerExtenstion.swift in Sources */,
 				0468D5901F29B22200C08093 /* MineCell.swift in Sources */,
 				04DE58EB1F20A2D4005192B7 /* HomeNavBarView.swift in Sources */,
