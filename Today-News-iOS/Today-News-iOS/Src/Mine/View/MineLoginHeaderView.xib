@@ -179,6 +179,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bgImageView" destination="9PH-1m-IVb" id="7ze-ZQ-swc"/>
+                <outlet property="dynamicLabel" destination="EMz-5l-oKN" id="hcy-Ue-FDr"/>
+                <outlet property="fansLabel" destination="QL9-u9-dPG" id="qUN-UA-edx"/>
+                <outlet property="visitorLabel" destination="Abw-S2-SZc" id="J6y-wz-WIX"/>
             </connections>
             <point key="canvasLocation" x="-9.5" y="-88"/>
         </view>

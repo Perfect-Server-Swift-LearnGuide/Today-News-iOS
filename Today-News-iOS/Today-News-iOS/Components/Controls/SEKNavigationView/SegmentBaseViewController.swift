@@ -40,7 +40,7 @@ extension SegmentBaseViewController: SEKNavigationViewDelegate {
     }
     
     func navLeftButtonClick(_ button: UIButton) {
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
         print("左")
     }
     

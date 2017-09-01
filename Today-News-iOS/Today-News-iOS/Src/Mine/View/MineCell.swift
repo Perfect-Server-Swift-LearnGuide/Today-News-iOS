@@ -19,9 +19,8 @@ class MineCell: UITableViewCell {
 }
 
 extension MineCell: ViewConfigurable {
-    
-    func viewSourceWithModel(_ model: AnyObject?, indexPath: IndexPath) {
-        guard let mine = model as? MineCellModel else {
+    func cell(source: AnyObject?, indexPath: IndexPath) {
+        guard let mine = source as? MineCellModel else {
             return
         }
 

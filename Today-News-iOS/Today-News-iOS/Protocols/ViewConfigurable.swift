@@ -8,25 +8,30 @@
 
 import UIKit
 
-@objc public protocol ViewConfigurable {
-    
-    /// cell 重用标识符
-    @objc optional var identifier: String { get set }
-    
-    /**
-     *  根据model配置UIView，设置UIView内容
-     */
-    @objc optional func viewSourceWithModel(_ model: AnyObject?)
-    
-    /**
-     *  根据model配置UITableViewCell，设置UITableViewCell内容
-     */
-    @objc optional func viewSourceWithModel(_ model: AnyObject?, indexPath: IndexPath)
+public protocol ViewConfigurable {
     
 }
 
-extension ViewConfigurable where Self : UITableViewCell {
+extension ViewConfigurable {
+    
+    /// cell 重用标识符
     var identifier: String {
         return String(describing: Self.self)
     }
+    
+    /// 根据model配置UITableViewCell，设置UITableViewCell内容
+    func cell(source: AnyObject?, indexPath: IndexPath) {
+        
+    }
+    
+    
+}
+
+extension ViewConfigurable where Self: UIView {
+    
+    /// 根据model配置UIView，设置UIView内容
+    func view(source: AnyObject?) {
+        
+    }
+    
 }

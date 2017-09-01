@@ -14,18 +14,21 @@ protocol RealmActionable: class {}
 extension RealmActionable where Self: Object {
 
     func write() {
-        try! realm?.write {
-            realm?.add(self)
+
+        try! Self.realm.write {
+            Self.realm.add(self, update: true)
+            print("数据库：\(self)    \n 存储路径：\(self.log())")
         }
-        
-        print("数据库：\(self)    \n 存储路径：\(log())")
+    
     }
     
     func log() -> String {
         return try! Realm().configuration.fileURL?.path ?? NSHomeDirectory()
     }
     
+    
     static var realm: Realm {
         return try! Realm()
     }
+    
 }

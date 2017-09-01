@@ -99,9 +99,8 @@ class HomeTopicViewCell: UITableViewCell {
 }
 
 extension HomeTopicViewCell: ViewConfigurable {
-    
-    func viewSourceWithModel(_ model: AnyObject?, indexPath: IndexPath) {
-        guard let content = model as? HomeContent else {
+    func cell(source: AnyObject?, indexPath: IndexPath) {
+        guard let content = source as? HomeContent else {
             return
         }
         

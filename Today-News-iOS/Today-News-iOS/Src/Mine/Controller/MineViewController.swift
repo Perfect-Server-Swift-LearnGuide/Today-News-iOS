@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MineViewController: UIViewController {
 
@@ -32,10 +33,6 @@ class MineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let u = User.realm.objects(User.self).first {
-            self.user = u
-        }
     
         setupUI()
         
@@ -54,6 +51,13 @@ class MineViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
         
+        if let u = User.realm.objects(User.self).first {
+            self.user = u
+        }
+        
+        self.loginHeaderView.view(source: self.user)
+        tableView.tableHeaderView = self.user.user_id.characters.count > 0 ? loginHeaderView : noLoginHeaderView
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -97,7 +101,6 @@ extension MineViewController {
         tableView.register(UINib(nibName: String(describing: MineCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MineCell.self))
         tableView.register(UINib(nibName: String(describing: MineActionCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MineActionCell.self))
         
-        tableView.tableHeaderView = self.user.user_id.characters.count > 0 ? loginHeaderView : noLoginHeaderView
         tableView.separatorColor = App.Color.MainTableSepGray.color
         tableView.tableFooterView = UIView()
     }
@@ -121,16 +124,16 @@ extension MineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MineActionCell.self), for: indexPath) as? ViewConfigurable else { fatalError("无法构建 Cell") }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MineActionCell.self), for: indexPath) as? MineActionCell else { fatalError("无法构建 Cell") }
             
-            return cell as? UITableViewCell ?? UITableViewCell()
+            return cell
         }
         
-        guard let rows = datas[indexPath.section - 1] as? [AnyObject], let data = rows[indexPath.row] as? MineCellModel,  let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MineCell.self), for: indexPath) as? ViewConfigurable else { fatalError("无法构建 Cell") }
+        guard let rows = datas[indexPath.section - 1] as? [AnyObject], let data = rows[indexPath.row] as? MineCellModel,  let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: MineCell.self), for: indexPath) as? MineCell else { fatalError("无法构建 Cell") }
         
-        cell.viewSourceWithModel!(data , indexPath: indexPath as IndexPath)
+        cell.cell(source: data , indexPath: indexPath as IndexPath)
         
-        return cell as? UITableViewCell ?? UITableViewCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

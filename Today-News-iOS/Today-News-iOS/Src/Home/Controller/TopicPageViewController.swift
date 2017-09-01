@@ -112,18 +112,19 @@ extension TopicPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let data = contents[indexPath.row] as AnyObject?,  let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTopicViewCell.self), for: indexPath) as? ViewConfigurable else { fatalError("无法构建 Cell") }
-        cell.viewSourceWithModel!(data, indexPath: indexPath as IndexPath)
+        guard let data = contents[indexPath.row] as AnyObject?,  let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HomeTopicViewCell.self), for: indexPath) as? HomeTopicViewCell else { fatalError("无法构建 Cell") }
         
-        return cell as? UITableViewCell ?? UITableViewCell()
+        cell.cell(source: data, indexPath: indexPath as IndexPath)
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         guard let data = contents[indexPath.row] as AnyObject? else { fatalError("解析数据失败") }
         return tableView.fd_heightForCell(withIdentifier:  String(describing: HomeTopicViewCell.self), cacheBy: indexPath) { cell in
-            if let cell = cell as? ViewConfigurable {
-                cell.viewSourceWithModel!(data, indexPath: indexPath as IndexPath)
+            if let cell = cell as? HomeTopicViewCell {
+                cell.cell(source: data, indexPath: indexPath as IndexPath)
             }
         }
     }

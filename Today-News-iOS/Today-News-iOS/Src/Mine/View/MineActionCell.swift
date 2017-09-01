@@ -16,7 +16,7 @@ class MineActionCell: UITableViewCell, ViewConfigurable {
     }
 
 
-    func viewSourceWithModel(_ model: AnyObject?, indexPath: IndexPath) {
+    func cell(source: AnyObject?, indexPath: IndexPath) {
         
     }
     

@@ -43,7 +43,7 @@
                         <constraint firstItem="eLn-mb-lsA" firstAttribute="width" secondItem="apB-Nd-uVh" secondAttribute="width" id="ezr-65-zfl"/>
                     </constraints>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0y-4B-L07" customClass="AnimatableButton" customModule="IBAnimatable">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0y-4B-L07">
                     <rect key="frame" x="125" y="121" width="125" height="28"/>
                     <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
