@@ -11,6 +11,6 @@ Today's News iOS
         <img src="https://img.shields.io/badge/build-passing-brightgreen.svg" alt="Continuous Integration">
     </a>
     <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-3.0-brightgreen.svg" alt="Swift 4.0">
+        <img src="http://img.shields.io/badge/swift-4.0-brightgreen.svg" alt="Swift 4.0">
     </a>
 </p>
